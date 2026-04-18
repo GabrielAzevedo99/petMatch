@@ -25,12 +25,8 @@ const ambienteLabel = { apartamento: "🏢 Apartamento", casa: "🏡 Casa" };
 const comportLabel  = { calmo: "😌 Calmo", ativo: "⚡ Ativo" };
 
 // --- Renderizar galeria ---
-async function renderPets() {
+async function renderPets(lista) {
   galeria.innerHTML = "";
-
-  const response = await fetch('../data/animals.json');
-  const animals = await response.json();
-  lista = animals;
 
   if (lista.length === 0) {
     galeria.innerHTML = `
@@ -99,7 +95,15 @@ document.getElementById("btnLimpar").addEventListener("click", () => {
 });
 
 // --- Inicial ---
-renderPets();
+fetch('../data/animals.json')
+.then(response => response.json())
+.then(data => {
+  renderPets(data);   // Renderiza a lista completa
+})
+.catch(error => {
+  console.error("Erro ao carregar os dados dos pets:", error);
+  galeria.innerHTML = "<p>Erro ao carregar os pets. Tente novamente mais tarde.</p>";
+});
 
 // by cristian
 function renderCard(animal) {
