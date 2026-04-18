@@ -1,94 +1,9 @@
-const pets = [
-  {
-    nome: "Luna",
-    tipo: "gato",
-    tamanho: "pequeno",
-    ambiente: "apartamento",
-    comportamento: "calmo",
-    compatibilidade: 92,
-    imagem: "https://placecats.com/400/300",
-    caracteristicas: "Calma, gosta de colo e adora uma soneca ao sol"
-  },
-  {
-    nome: "Max",
-    tipo: "gato",
-    tamanho: "medio",
-    ambiente: "apartamento",
-    comportamento: "calmo",
-    compatibilidade: 75,
-    imagem: "https://placecats.com/401/300",
-    caracteristicas: "Tranquilo e amigável, se dá bem com crianças"
-  },
-  {
-    nome: "Bella",
-    tipo: "cao",
-    tamanho: "grande",
-    ambiente: "casa",
-    comportamento: "ativo",
-    compatibilidade: 60,
-    imagem: "https://place.dog/400/300",
-    caracteristicas: "Energia alta, ama corridas e brincadeiras ao ar livre"
-  },
-  {
-    nome: "Thor",
-    tipo: "cao",
-    tamanho: "grande",
-    ambiente: "casa",
-    comportamento: "ativo",
-    compatibilidade: 85,
-    imagem: "https://place.dog/401/300",
-    caracteristicas: "Brincalhão e leal, ideal para famílias com espaço"
-  },
-  {
-    nome: "Mel",
-    tipo: "cao",
-    tamanho: "pequeno",
-    ambiente: "apartamento",
-    comportamento: "calmo",
-    compatibilidade: 78,
-    imagem: "https://place.dog/402/300",
-    caracteristicas: "Pequenina e dócil, perfeita para apartamentos"
-  },
-  {
-    nome: "Simba",
-    tipo: "gato",
-    tamanho: "medio",
-    ambiente: "casa",
-    comportamento: "ativo",
-    compatibilidade: 55,
-    imagem: "https://placecats.com/402/300",
-    caracteristicas: "Curioso e aventureiro, adora explorar cada cantinho"
-  },
-  {
-    nome: "Nina",
-    tipo: "cao",
-    tamanho: "medio",
-    ambiente: "apartamento",
-    comportamento: "calmo",
-    compatibilidade: 88,
-    imagem: "https://place.dog/403/300",
-    caracteristicas: "Meiga e obediente, se adapta bem a qualquer ambiente"
-  },
-  {
-    nome: "Rex",
-    tipo: "cao",
-    tamanho: "grande",
-    ambiente: "casa",
-    comportamento: "ativo",
-    compatibilidade: 70,
-    imagem: "https://place.dog/404/300",
-    caracteristicas: "Protetor e companheiro, precisa de muito espaço para correr"
-  }
-];
-
 // --- Estado de favoritos ---
 let favoritos = new Set();
 
 // --- Elementos do DOM ---
 const galeria = document.getElementById("galeria");
 const resultadosInfo = document.getElementById("resultadosInfo");
-const modalOverlay = document.getElementById("modalOverlay");
-const modalFechar = document.getElementById("modalFechar");
 const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.getElementById("sidebar");
 
@@ -110,13 +25,14 @@ const ambienteLabel = { apartamento: "🏢 Apartamento", casa: "🏡 Casa" };
 const comportLabel  = { calmo: "😌 Calmo", ativo: "⚡ Ativo" };
 
 // --- Renderizar galeria ---
-function renderPets(lista) {
+async function renderPets() {
   galeria.innerHTML = "";
 
-  // Ordenar por compatibilidade (maior primeiro)
-  const ordenada = [...lista].sort((a, b) => b.compatibilidade - a.compatibilidade);
+  const response = await fetch('../data/animals.json');
+  const animals = await response.json();
+  lista = animals;
 
-  if (ordenada.length === 0) {
+  if (lista.length === 0) {
     galeria.innerHTML = `
       <div class="estado-vazio">
         <span class="vazio-icon">🐾</span>
@@ -127,48 +43,10 @@ function renderPets(lista) {
     return;
   }
 
-  resultadosInfo.textContent = `${ordenada.length} pet${ordenada.length > 1 ? "s" : ""} encontrado${ordenada.length > 1 ? "s" : ""}`;
+  resultadosInfo.textContent = `${lista.length} pet${lista.length > 1 ? "s" : ""} encontrado${lista.length > 1 ? "s" : ""}`;
 
-  ordenada.forEach(pet => {
-    const match   = getClassificacao(pet.compatibilidade);
-    const isFav   = favoritos.has(pet.nome);
-
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <div class="card-img-wrap">
-        <img src="${pet.imagem}" alt="Foto de ${pet.nome}" loading="lazy">
-        <span class="match-badge ${match.classe}">${match.texto} ${pet.compatibilidade}%</span>
-        <button class="btn-fav ${isFav ? "favoritado" : ""}" data-nome="${pet.nome}" aria-label="${isFav ? "Remover dos favoritos" : "Favoritar"} ${pet.nome}">
-          ${isFav ? "❤" : "🤍"}
-        </button>
-      </div>
-      <div class="card-content">
-        <div class="card-header">
-          <span class="nome">${pet.nome}</span>
-          <div class="tags">
-            <span class="tag">${tamanhoLabel[pet.tamanho]}</span>
-            <span class="tag">${ambienteLabel[pet.ambiente]}</span>
-            <span class="tag">${comportLabel[pet.comportamento]}</span>
-          </div>
-        </div>
-        <p class="caracteristicas">${pet.caracteristicas}</p>
-        <div class="botoes">
-          <button class="btn-detalhes" data-nome="${pet.nome}">Ver detalhes</button>
-          <button class="btn-fav-card ${isFav ? "favoritado" : ""}" data-nome="${pet.nome}">
-            ${isFav ? "❤ Favoritado" : "🤍 Favoritar"}
-          </button>
-        </div>
-      </div>
-    `;
-
-    galeria.appendChild(card);
-  });
-
-  // Eventos dos cards
-  galeria.querySelectorAll(".btn-detalhes").forEach(btn => {
-    btn.addEventListener("click", () => abrirModal(btn.dataset.nome));
+  lista.forEach(animal => {
+    galeria.appendChild(renderCard(animal));
   });
 
   galeria.querySelectorAll(".btn-fav, .btn-fav-card").forEach(btn => {
@@ -189,58 +67,6 @@ function toggleFavorito(nome) {
     showToast(`${nome} adicionado aos favoritos! ❤`);
   }
   aplicarFiltros();
-}
-
-// --- Modal de detalhes ---
-function abrirModal(nome) {
-  const pet = pets.find(p => p.nome === nome);
-  if (!pet) return;
-
-  const match = getClassificacao(pet.compatibilidade);
-
-  document.getElementById("modalImg").src = pet.imagem;
-  document.getElementById("modalImg").alt = "Foto de " + pet.nome;
-  document.getElementById("modalNome").textContent = pet.nome;
-  document.getElementById("modalCaracteristicas").textContent = pet.caracteristicas;
-  document.getElementById("modalMatch").textContent = `${match.texto} ${pet.compatibilidade}%`;
-  document.getElementById("modalMatch").className = "modal-match-badge " + match.classe;
-
-  const tagsEl = document.getElementById("modalTags");
-  tagsEl.innerHTML = `
-    <span class="tag">${tamanhoLabel[pet.tamanho]}</span>
-    <span class="tag">${ambienteLabel[pet.ambiente]}</span>
-    <span class="tag">${comportLabel[pet.comportamento]}</span>
-  `;
-
-  const btnAdotar = document.getElementById("modalAdotar");
-  btnAdotar.onclick = () => {
-    fecharModal();
-    showToast(`Solicitação de adoção de ${pet.nome} enviada! 🐾`);
-  };
-
-  modalOverlay.classList.add("aberto");
-  document.body.style.overflow = "hidden";
-}
-
-function fecharModal() {
-  modalOverlay.classList.remove("aberto");
-  document.body.style.overflow = "";
-}
-
-modalFechar.addEventListener("click", fecharModal);
-modalOverlay.addEventListener("click", (e) => {
-  if (e.target === modalOverlay) fecharModal();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") fecharModal();
-});
-
-// --- Toast ---
-function showToast(msg) {
-  const toast = document.getElementById("toast");
-  toast.textContent = msg;
-  toast.classList.add("visivel");
-  setTimeout(() => toast.classList.remove("visivel"), 2800);
 }
 
 // --- Filtros ---
@@ -273,4 +99,90 @@ document.getElementById("btnLimpar").addEventListener("click", () => {
 });
 
 // --- Inicial ---
-renderPets(pets);
+renderPets();
+
+// by cristian
+function renderCard(animal) {
+  const matchScore = animal.matchScore;
+  let matchClass = 'padrao';
+  let matchText = `${matchScore}%`;
+
+  if (matchScore >= 85) {
+    matchClass = 'super';
+    matchText = '⭐ SUPER MATCH';
+  } else if (matchScore >= 70) {
+    matchClass = 'bom';
+    matchText = `✓ ${matchScore}%`;
+  }
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="card-img-wrap">
+      <img src="${animal.images[0]}" alt="${animal.name}" />
+      <div class="match-badge ${matchClass}">${matchText}</div>
+      <button class="btn-fav" id="fav-${animal.id}" aria-label="Adicionar aos favoritos">🤍</button>
+    </div>
+    <div class="card-content">
+      <div class="card-header">
+        <span class="nome">${animal.name}</span>
+        <div class="tags">
+          <span class="tag">${animal.species}</span>
+          <span class="tag">${animal.size}</span>
+        </div>
+      </div>
+      <p class="caracteristicas">${animal.behaviors.join(', ')}</p>
+      <div class="botoes">
+        <button class="btn-detalhes" data-animal-id="${animal.id}">👁️ Ver Detalhes</button>
+        <button class="btn-fav-card" data-animal-id="${animal.id}">❤️</button>
+      </div>
+    </div>
+  `;
+
+  // ADICIONAR EVENT LISTENER PARA NAVEGAÇÃO
+  const btnDetalhes = card.querySelector('.btn-detalhes');
+  btnDetalhes.addEventListener('click', () => {
+    window.location.href = `detalhe/index.html?id=${animal.id}`;
+  });
+
+  // Adicionar evento de favorito
+  const btnFav = card.querySelector(`#fav-${animal.id}`);
+  const btnFavCard = card.querySelector('.btn-fav-card');
+  
+  // Verificar se já é favorito
+  if (localStorage.getItem(`fav-${animal.id}`)) {
+    btnFav.textContent = '❤️';
+    btnFavCard.textContent = '❤️';
+  }
+
+  // Toggle favorito
+  const toggleFav = () => {
+    if (localStorage.getItem(`fav-${animal.id}`)) {
+      localStorage.removeItem(`fav-${animal.id}`);
+      btnFav.textContent = '🤍';
+      btnFavCard.textContent = '❤️';
+    } else {
+      localStorage.setItem(`fav-${animal.id}`, 'true');
+      btnFav.textContent = '❤️';
+      btnFavCard.textContent = '❤️';
+    }
+  };
+
+  btnFav.addEventListener('click', toggleFav);
+  btnFavCard.addEventListener('click', toggleFav);
+
+  return card;
+}
+
+// ALTERNATIVA: Se você quer clicar no card inteiro
+function makeCardClickable(card, animalId) {
+  card.style.cursor = 'pointer';
+  
+  card.addEventListener('click', (e) => {
+    // Não navegar se clicou nos botões
+    if (e.target.closest('.btn-fav, .botoes')) {
+      return;
+    }
+    window.location.href = `detalhe.html?id=${animalId}`;
+  });
+}
