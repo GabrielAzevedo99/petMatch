@@ -29,7 +29,7 @@ function getClassificacao(pct) {
 }
 
 // --- Renderizar galeria ---
-async function renderPets(lista) {
+async function renderPets(lista = []) {
   galeria.innerHTML = "";
 
   if (lista.length === 0) {
@@ -43,11 +43,13 @@ async function renderPets(lista) {
     return;
   }
 
-  resultadosInfo.textContent = `${lista.length} pet${lista.length > 1 ? "s" : ""} encontrado${lista.length > 1 ? "s" : ""}`;
-
-  lista.forEach(animal => {
-    galeria.appendChild(renderCard(animal));
-  });
+  resultadosInfo.textContent = `${lista.length} ${lista.length > 1 ? 'pets encontrados' : 'pet encontrado'}`;
+  
+  lista
+    .sort((a, b) => b.matchScore - a.matchScore)
+    .forEach(animal => {
+      galeria.appendChild(renderCard(animal));
+    });
 
   galeria.querySelectorAll(".btn-fav, .btn-fav-card").forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -173,7 +175,7 @@ function renderCard(animal) {
       </div>
       <p class="caracteristicas">${animal.behaviors.join(', ')}</p>
       <div class="botoes">
-        <button class="btn-detalhes" data-animal-id="${animal.id}">👁️ Ver Detalhes</button>
+        <button class="btn-detalhes" data-animal-id="${animal.id}">Ver Detalhes</button>
         <button class="btn-fav-card" data-animal-id="${animal.id}">❤️</button>
       </div>
     </div>
@@ -193,6 +195,7 @@ function renderCard(animal) {
   if (localStorage.getItem(`fav-${animal.id}`)) {
     btnFav.textContent = '❤️';
     btnFavCard.textContent = '❤️';
+    btnFavCard.classList.add('favoritado');
   }
 
   // Toggle favorito
@@ -202,6 +205,7 @@ function renderCard(animal) {
     if (localStorage.getItem(`fav-${animal.id}`)) {
       btnFav.textContent = '❤️';
       btnFavCard.textContent = '❤️';
+      btnFavCard.classList.add('favoritado');
     } else {
       btnFav.textContent = '🤍';
       btnFavCard.textContent = '❤️';
