@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Pet - PetMatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>🐾 PetMatch</h1>
+    <p class="header-sub">Encontre seu companheiro ideal</p>
+  </div>
+</header>
+
+<div class="detalhe-container">
+  <a href="../index.html" class="btn-voltar">← Voltar</a>
+
+  <div class="detalhe-layout">
+    <!-- GALERIA DE FOTOS -->
+    <div class="galeria-fotos">
+      <div class="foto-principal">
+        <img id="fotoMain" src="" alt="Foto do pet" />
+        <div class="match-badge-detalhe" id="matchBadge"></div>
+      </div>
+      <div class="galeria-miniaturas" id="galeriaMini"></div>
+    </div>
+
+    <!-- INFORMAÇÕES -->
+    <div class="info-pet">
+      <!-- Header -->
+      <div class="header-pet">
+        <h1 class="nome-detalhe" id="nomePet"></h1>
+        <p class="raca-detalhe" id="racaPet"></p>
+      </div>
+
+      <!-- Info Básica -->
+      <div class="info-basica" id="infoBasica"></div>
+
+      <!-- Características Comportamentais -->
+      <div class="secao">
+        <div class="secao-titulo">📊 Características Comportamentais</div>
+        <div class="tags-detalhe" id="comportamentos"></div>
+      </div>
+
+      <!-- Ambiente -->
+      <div class="secao">
+        <div class="secao-titulo">🏠 Ambiente Ideal</div>
+        <div class="tags-detalhe" id="ambientes"></div>
+      </div>
+
+      <!-- Compatibilidades -->
+      <div class="secao">
+        <div class="secao-titulo">🤝 Compatibilidades</div>
+        <div class="tags-detalhe" id="compatibilidades"></div>
+      </div>
+
+      <!-- Saúde -->
+      <div class="secao">
+        <div class="secao-titulo">💉 Status de Saúde</div>
+        <div class="saude-checks" id="statusSaude"></div>
+      </div>
+
+      <!-- Descrição -->
+      <div>
+        <div class="secao-titulo">📖 História do Pet</div>
+        <div class="descricao-pet" id="descricaoPet"></div>
+      </div>
+
+      <!-- Contato -->
+      <div class="secao">
+        <div class="secao-titulo">📞 Responsável</div>
+        <div class="contato-info" id="contatoInfo"></div>
+      </div>
+
+      <!-- Ações -->
+      <div class="acoes">
+        <button class="btn-acao btn-msg" id="btnMsg">💬 Enviar mensagem</button>
+        <button class="btn-acao btn-fav-detalhe" id="btnFav">🤍 Favoritar</button>
+        <button class="btn-acao btn-compartilhar" id="btnCompartilhar">📤 Compartilhar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
