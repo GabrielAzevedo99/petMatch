@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetMatch</title>
+<link rel="stylesheet" href="menu.css">
 </head>
+
 <body>
-    <h2>pet matcht</h2>
-    <a href="menu.html">Inicio</a>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            🐾 <span>PetMatch</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="active">🏠 Início</li>
+                <li>🔍 Buscar Pets</li>
+                <li>❤️ Meus Favoritos</li>
+                <li>👤 Meu Perfil</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+            <h2>Sugeridos para Você:</h2>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/40" alt="Usuário">
+                <span>aluno fatec - 92%</span>
+            </div>
+        </header>
+
+        <p class="subtitle">
+            matches ideais baseados no seu estilo de vida
+        </p>
+
+        <!-- FILTROS -->
+        <div class="filters">
+            <button class="active">Todos</button>
+            <button>Cães</button>
+            <button>Gatos</button>
+            <button>Pequenos</button>
+            <button>Tranquilos</button>
+        </div>
+
+        <!-- CARDS -->
+        <section class="cards">
+
+            <!-- CARD 1 -->
+            <div class="card">
+                <img src="img/animais/dog1">
+
+                <div class="card-content">
+                    <h3>❤️ Rex</h3>
+
+                    <ul>
+                        <li>✔ Energia Calma</li>
+                        <li>✔ Ideal para Apartamento</li>
+                        <li>✔ Sem Crianças</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <button class="details">Ver Detalhes</button>
+                        <button class="favorite">Favoritar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <img src="img/animais/do2">
+
+                <div class="card-content">
+                    <h3>❤️ Luna</h3>
+
+                    <ul>
+                        <li>✔ Apartamento</li>
+                        <li>✔ Pouco Tempo Livre</li>
+                        <li>✔ Sem Crianças</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <button class="details">Ver Detalhes</button>
+                        <button class="favorite">Favoritar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <img src="img/animais/dog3">
+
+                <div class="card-content">
+                    <h3>❤️ Max</h3>
+
+                    <ul>
+                        <li>✔ Tem Crianças</li>
+                        <li>✔ Casa com Quintal</li>
+                        <li>✔ Muito Tempo Livre</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <button class="details">Ver Detalhes</button>
+                        <button class="favorite">Favoritar</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
 </body>
 </html>
