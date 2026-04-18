@@ -161,7 +161,7 @@ function renderCard(animal) {
   card.className = 'card';
   card.innerHTML = `
     <div class="card-img-wrap">
-      <img src="${animal.images[0]}" alt="${animal.name}" />
+      <img loading="lazy" src="${animal.images[0]}" alt="${animal.name}" />
       <div class="match-badge ${matchClass}">${matchText}</div>
       <button class="btn-fav" id="fav-${animal.id}" aria-label="Adicionar aos favoritos">🤍</button>
     </div>
