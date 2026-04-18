@@ -1,16 +1,25 @@
-// --- Estado de favoritos ---
-let favoritos = new Set();
+// --- Estado global ---
+let pets = [];
 
 // --- Elementos do DOM ---
 const galeria = document.getElementById("galeria");
 const resultadosInfo = document.getElementById("resultadosInfo");
 const menuToggle = document.getElementById("menuToggle");
 const sidebar = document.getElementById("sidebar");
+const toast = document.getElementById("toast");
 
 menuToggle.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
 
+// --- Toast de notificação ---
+function showToast(mensagem) {
+  toast.textContent = mensagem;
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
 
 // --- Classificação de match ---
 function getClassificacao(pct) {
@@ -18,11 +27,6 @@ function getClassificacao(pct) {
   if (pct >= 70) return { texto: "✓ Bom Match",   classe: "bom"   };
   return           { texto: "Match",                classe: "padrao" };
 }
-
-// --- Rótulos de tamanho ---
-const tamanhoLabel = { pequeno: "🐾 Pequeno", medio: "🐾 Médio", grande: "🐾 Grande" };
-const ambienteLabel = { apartamento: "🏢 Apartamento", casa: "🏡 Casa" };
-const comportLabel  = { calmo: "😌 Calmo", ativo: "⚡ Ativo" };
 
 // --- Renderizar galeria ---
 async function renderPets(lista) {
@@ -48,36 +52,67 @@ async function renderPets(lista) {
   galeria.querySelectorAll(".btn-fav, .btn-fav-card").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      toggleFavorito(btn.dataset.nome);
     });
   });
 }
 
 // --- Favoritar ---
-function toggleFavorito(nome) {
-  if (favoritos.has(nome)) {
-    favoritos.delete(nome);
-    showToast(`${nome} removido dos favoritos`);
+function toggleFavorito(animalId, animalName) {
+  if (localStorage.getItem(`fav-${animalId}`)) {
+    localStorage.removeItem(`fav-${animalId}`);
+    showToast(`${animalName} removido dos favoritos`);
   } else {
-    favoritos.add(nome);
-    showToast(`${nome} adicionado aos favoritos! ❤`);
+    localStorage.setItem(`fav-${animalId}`, 'true');
+    showToast(`${animalName} adicionado aos favoritos! ❤`);
   }
   aplicarFiltros();
 }
 
 // --- Filtros ---
 function aplicarFiltros() {
-  const tipo        = document.getElementById("tipoFiltro").value;
-  const tamanho     = document.getElementById("tamanhoFiltro").value;
-  const ambiente    = document.getElementById("ambienteFiltro").value;
+  const tipo = document.getElementById("tipoFiltro").value;
+  const tamanho = document.getElementById("tamanhoFiltro").value;
+  const ambiente = document.getElementById("ambienteFiltro").value;
   const comportamento = document.getElementById("comportamentoFiltro").value;
 
-  const filtrados = pets.filter(pet =>
-    (tipo         === "todos" || pet.tipo         === tipo)        &&
-    (tamanho      === "todos" || pet.tamanho      === tamanho)     &&
-    (ambiente     === "todos" || pet.ambiente     === ambiente)    &&
-    (comportamento === "todos" || pet.comportamento === comportamento)
-  );
+  const filtrados = pets.filter(pet => {
+    // Filtro de tipo
+    let passaTipo = tipo === "todos";
+    if (!passaTipo) {
+      if (tipo === "cao") passaTipo = pet.category?.toLowerCase() === "cão";
+      else if (tipo === "gato") passaTipo = pet.category?.toLowerCase() === "gato";
+      else if (tipo === "silvestre") passaTipo = pet.category?.toLowerCase() === "silvestre";
+    }
+
+    // Filtro de tamanho
+    let passaTamanho = tamanho === "todos";
+    if (!passaTamanho) {
+      const tamanhoMapeado = { pequeno: "Pequeno", medio: "Médio", grande: "Grande" };
+      passaTamanho = pet.size === tamanhoMapeado[tamanho];
+    }
+
+    // Filtro de ambiente (pet.environment é um array)
+    let passaAmbiente = ambiente === "todos";
+    if (!passaAmbiente && pet.environment) {
+      if (ambiente === "apartamento") {
+        passaAmbiente = pet.environment.some(a => a.toLowerCase().includes("apartamento"));
+      } else if (ambiente === "casa") {
+        passaAmbiente = pet.environment.some(a => a.toLowerCase().includes("casa"));
+      }
+    }
+
+    // Filtro de comportamento (pet.behaviors é um array)
+    let passaComportamento = comportamento === "todos";
+    if (!passaComportamento && pet.behaviors) {
+      if (comportamento === "calmo") {
+        passaComportamento = pet.behaviors.some(b => b.toLowerCase().includes("calmo") || b.toLowerCase().includes("tranquilo"));
+      } else if (comportamento === "ativo") {
+        passaComportamento = pet.behaviors.some(b => b.toLowerCase().includes("ativo") || b.toLowerCase().includes("alegre") || b.toLowerCase().includes("brincalhão"));
+      }
+    }
+
+    return passaTipo && passaTamanho && passaAmbiente && passaComportamento;
+  });
 
   renderPets(filtrados);
 }
@@ -94,16 +129,17 @@ document.getElementById("btnLimpar").addEventListener("click", () => {
   showToast("Filtros limpos!");
 });
 
-// --- Inicial ---
+// --- Carregamento inicial ---
 fetch('../data/animals.json')
-.then(response => response.json())
-.then(data => {
-  renderPets(data);   // Renderiza a lista completa
-})
-.catch(error => {
-  console.error("Erro ao carregar os dados dos pets:", error);
-  galeria.innerHTML = "<p>Erro ao carregar os pets. Tente novamente mais tarde.</p>";
-});
+  .then(response => response.json())
+  .then(data => {
+    pets = data;
+    renderPets(pets);
+  })
+  .catch(error => {
+    console.error("Erro ao carregar os dados dos pets:", error);
+    galeria.innerHTML = "<p>Erro ao carregar os pets. Tente novamente mais tarde.</p>";
+  });
 
 // by cristian
 function renderCard(animal) {
@@ -149,7 +185,7 @@ function renderCard(animal) {
     window.location.href = `detalhe/index.html?id=${animal.id}`;
   });
 
-  // Adicionar evento de favorito
+  // Botões de favorito
   const btnFav = card.querySelector(`#fav-${animal.id}`);
   const btnFavCard = card.querySelector('.btn-fav-card');
   
@@ -161,13 +197,13 @@ function renderCard(animal) {
 
   // Toggle favorito
   const toggleFav = () => {
+    toggleFavorito(animal.id, animal.name);
+    // Atualizar visual dos botões
     if (localStorage.getItem(`fav-${animal.id}`)) {
-      localStorage.removeItem(`fav-${animal.id}`);
-      btnFav.textContent = '🤍';
+      btnFav.textContent = '❤️';
       btnFavCard.textContent = '❤️';
     } else {
-      localStorage.setItem(`fav-${animal.id}`, 'true');
-      btnFav.textContent = '❤️';
+      btnFav.textContent = '🤍';
       btnFavCard.textContent = '❤️';
     }
   };
