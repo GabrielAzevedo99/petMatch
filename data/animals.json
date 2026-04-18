@@ -1,13 +1,13 @@
-﻿[
+[
   {
     "id": "animal-001",
     "name": "Luna",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Poodle",
     "breed": "Poodle",
     "age": "4 anos",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
+    "sex": "Fémea",
+    "size": "Médio",
     "matchScore": 91,
     "isFavorite": false,
     "badges": {},
@@ -21,7 +21,7 @@
       "Independente"
     ],
     "compatibilities": [
-      "Precisa de espaÃ§o",
+      "Precisa de espaço",
       "Adora receber visitas"
     ],
     "health": [
@@ -29,8 +29,8 @@
       "Microchipado",
       "Vermifugado"
     ],
-    "description": "Luna Ã© um animal de personalidade alegre e se adapta bem a ambientes casa pequena.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com muita energia.",
+    "description": "Luna é um animal de personalidade alegre e se adapta bem a ambientes casa pequena.",
+    "story": "Encontrado em uma área rural, foi resgatado com muita energia.",
     "images": [
       "https://placedog.net/400/280?id=1",
       "https://placedog.net/400/280?id=2",
@@ -45,11 +45,11 @@
   {
     "id": "animal-002",
     "name": "Penny",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Labrador",
     "breed": "Labrador",
     "age": "5 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Grande",
     "matchScore": 76,
     "isFavorite": false,
@@ -61,10 +61,10 @@
     "behaviors": [
       "Ativo",
       "Tranquilo",
-      "TÃ­mido"
+      "Tímido"
     ],
     "compatibilities": [
-      "Sem CrianÃ§as",
+      "Sem crianças",
       "Casa com Quintal"
     ],
     "health": [
@@ -73,7 +73,7 @@
       "Castrado"
     ],
     "description": "Penny Ã© um animal de personalidade ativo e se adapta bem a ambientes ãrea rural.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com muita fome.",
+    "story": "Encontrado em uma área rural, foi resgatado com muita fome.",
     "images": [
       "https://placedog.net/400/280?id=2"
     ],
@@ -86,12 +86,12 @@
   {
     "id": "animal-003",
     "name": "Thor",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Labrador",
     "breed": "Labrador",
     "age": "4 anos",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
+    "sex": "Fémea",
+    "size": "Médio",
     "matchScore": 73,
     "isFavorite": false,
     "badges": {},
@@ -100,7 +100,7 @@
       "Casa com Quintal"
     ],
     "behaviors": [
-      "BrincalhÃ£o",
+      "Brincalhão",
       "Calmo",
       "Protector"
     ],
@@ -113,7 +113,7 @@
       "Vermifugado",
       "Castrado"
     ],
-    "description": "Thor Ã© um animal de personalidade brincalhã£o e se adapta bem a ambientes fazenda.",
+    "description": "Thor é um animal de personalidade brincalhão e se adapta bem a ambientes fazenda.",
     "story": "Encontrado em um parque, foi resgatado com um pouco de medo.",
     "images": [
       "https://placedog.net/400/280?id=3"
@@ -127,11 +127,11 @@
   {
     "id": "animal-004",
     "name": "Fiona",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Beagle",
     "breed": "Beagle",
     "age": "2 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Pequeno",
     "matchScore": 86,
     "isFavorite": false,
@@ -142,19 +142,19 @@
     ],
     "behaviors": [
       "Quieto",
-      "TÃ­mido",
-      "SociÃ¡vel"
+      "Tímido",
+      "Sociável"
     ],
     "compatibilities": [
       "Adora receber visitas",
-      "Precisa de espaÃ§o"
+      "Precisa de espaço"
     ],
     "health": [
       "Vermifugado",
       "Microchipado",
       "Castrado"
     ],
-    "description": "Fiona Ã© um animal de personalidade quieto e se adapta bem a ambientes casa pequena.",
+    "description": "Fiona é um animal de personalidade quieto e se adapta bem a ambientes casa pequena.",
     "story": "Encontrado em um bairro residencial, foi resgatado com muita energia.",
     "images": [
       "https://placedog.net/400/280?id=4"
@@ -168,7 +168,7 @@
   {
     "id": "animal-005",
     "name": "Rubi",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Pastor AlemÃ£o",
     "breed": "Pastor AlemÃ£o",
     "age": "6 meses",
@@ -178,16 +178,16 @@
     "isFavorite": false,
     "badges": {},
     "environment": [
-      "Ãrea Rural",
-      "SÃ­tio"
+      "Área Rural",
+      "Sítio"
     ],
     "behaviors": [
       "Tranquilo",
       "Curioso",
-      "BrincalhÃ£o"
+      "Brincalhão"
     ],
     "compatibilities": [
-      "Precisa de espaÃ§o",
+      "Precisa de espaço",
       "Adora receber visitas"
     ],
     "health": [
@@ -209,7 +209,7 @@
   {
     "id": "animal-006",
     "name": "Mora",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Dachshund",
     "breed": "Dachshund",
     "age": "1 ano",
@@ -236,8 +236,8 @@
       "Vacinado",
       "Microchipado"
     ],
-    "description": "Mora Ã© um animal de personalidade carinhoso e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com muita energia.",
+    "description": "Mora é um animal de personalidade carinhoso e se adapta bem a ambientes apartamento.",
+    "story": "Encontrado em uma área rural, foi resgatado com muita energia.",
     "images": [
       "https://placedog.net/400/280?id=6"
     ],
@@ -250,34 +250,34 @@
   {
     "id": "animal-007",
     "name": "Pipoca",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Dachshund",
     "breed": "Dachshund",
     "age": "7 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "MÃ©dio",
     "matchScore": 95,
     "isFavorite": false,
     "badges": "SUPER MATCH",
     "environment": [
       "Apartamento",
-      "SÃ­tio"
+      "Sítio"
     ],
     "behaviors": [
       "Tranquilo",
-      "SociÃ¡vel",
+      "Sociável",
       "Ativo"
     ],
     "compatibilities": [
       "Ideal para Apartamento",
-      "SociÃ¡vel com pessoas"
+      "Sociável com pessoas"
     ],
     "health": [
       "Vacinado",
       "Microchipado",
       "Vermifugado"
     ],
-    "description": "Pipoca Ã© um animal de personalidade tranquilo e se adapta bem a ambientes apartamento.",
+    "description": "Pipoca é um animal de personalidade tranquilo e se adapta bem a ambientes apartamento.",
     "story": "Encontrado em um bosque, foi resgatado com um ferimento leve.",
     "images": [
       "https://placedog.net/400/280?id=7"
@@ -291,11 +291,11 @@
   {
     "id": "animal-008",
     "name": "Cacau",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Poodle",
     "breed": "Poodle",
     "age": "7 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Pequeno",
     "matchScore": 90,
     "isFavorite": false,
@@ -311,20 +311,20 @@
     ],
     "compatibilities": [
       "Aceita gatos",
-      "Bom com CrianÃ§as"
+      "Bom com crianças"
     ],
     "health": [
       "Microchipado",
       "Vacinado",
       "Castrado"
     ],
-    "description": "Cacau Ã© um animal de personalidade carinhoso e se adapta bem a ambientes casa com quintal.",
+    "description": "Cacau é um animal de personalidade carinhoso e se adapta bem a ambientes casa com quintal.",
     "story": "Encontrado em uma feira, foi resgatado com um pouco de medo.",
     "images": [
       "https://placedog.net/400/280?id=8"
     ],
     "contact": {
-      "caretakerName": "JoÃ£o Pedro",
+      "caretakerName": "João Pedro",
       "phone": "(11) 95845-9008",
       "email": "cacau@petmatch.org"
     }
@@ -332,7 +332,7 @@
   {
     "id": "animal-009",
     "name": "Luna",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Labrador",
     "breed": "Labrador",
     "age": "8 anos",
@@ -346,8 +346,8 @@
       "Casa Pequena"
     ],
     "behaviors": [
-      "TÃ­mido",
-      "SociÃ¡vel",
+      "Tímido",
+      "Sociável",
       "Ativo"
     ],
     "compatibilities": [
@@ -359,7 +359,7 @@
       "Vacinado",
       "Microchipado"
     ],
-    "description": "Luna Ã© um animal de personalidade tã­mido e se adapta bem a ambientes ãrea rural.",
+    "description": "Luna Ã© um animal de personalidade tímido e se adapta bem a ambientes ãrea rural.",
     "story": "Encontrado em uma rua tranquila, foi resgatado com um pouco de medo.",
     "images": [
       "https://placedog.net/400/280?id=9"
@@ -373,35 +373,35 @@
   {
     "id": "animal-010",
     "name": "Maya",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Dachshund",
     "breed": "Dachshund",
     "age": "7 anos",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
+    "sex": "Fémea",
+    "size": "Médio",
     "matchScore": 77,
     "isFavorite": false,
     "badges": {},
     "environment": [
-      "Ãrea Rural",
+      "Área Rural",
       "Fazenda"
     ],
     "behaviors": [
-      "SociÃ¡vel",
+      "Sociável",
       "Calmo",
       "Independente"
     ],
     "compatibilities": [
       "Aceita gatos",
-      "SociÃ¡vel com pessoas"
+      "Sociável com pessoas"
     ],
     "health": [
       "Castrado",
       "Vacinado",
       "Microchipado"
     ],
-    "description": "Maya Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes ãrea rural.",
-    "story": "Encontrado em uma feira, foi resgatado com saÃºde estÃ¡vel.",
+    "description": "Maya é um animal de personalidade sociável e se adapta bem a ambientes área rural.",
+    "story": "Encontrado em uma feira, foi resgatado com saúde estável.",
     "images": [
       "https://placedog.net/400/280?id=10"
     ],
@@ -414,7 +414,7 @@
   {
     "id": "animal-011",
     "name": "Zeus",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "SRD",
     "breed": "SRD",
     "age": "2 anos",
@@ -424,7 +424,7 @@
     "isFavorite": false,
     "badges": {},
     "environment": [
-      "Ãrea Rural",
+      "Área Rural",
       "Casa com Quintal"
     ],
     "behaviors": [
@@ -434,20 +434,20 @@
     ],
     "compatibilities": [
       "Ideal para Apartamento",
-      "Bom com outros cÃ£es"
+      "Bom com outros cães"
     ],
     "health": [
       "Vermifugado",
       "Microchipado",
       "Castrado"
     ],
-    "description": "Zeus Ã© um animal de personalidade alegre e se adapta bem a ambientes ãrea rural.",
+    "description": "Zeus é um animal de personalidade alegre e se adapta bem a ambientes área rural.",
     "story": "Encontrado em um parque, foi resgatado com um pouco de medo.",
     "images": [
       "https://placedog.net/400/280?id=11"
     ],
     "contact": {
-      "caretakerName": "JoÃ£o Pedro",
+      "caretakerName": "João Pedro",
       "phone": "(11) 96661-3918",
       "email": "zeus@petmatch.org"
     }
@@ -455,7 +455,7 @@
   {
     "id": "animal-012",
     "name": "Sasha",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Bulldog",
     "breed": "Bulldog",
     "age": "3 anos",
@@ -465,24 +465,24 @@
     "isFavorite": false,
     "badges": {},
     "environment": [
-      "Ãrea Rural",
+      "Área Rural",
       "Casa com Quintal"
     ],
     "behaviors": [
-      "SociÃ¡vel",
+      "Sociável",
       "Calmo",
       "Curioso"
     ],
     "compatibilities": [
-      "SociÃ¡vel com pessoas",
-      "Bom com CrianÃ§as"
+      "Sociável com pessoas",
+      "Bom com crianças"
     ],
     "health": [
       "Castrado",
       "Vermifugado",
       "Microchipado"
     ],
-    "description": "Sasha Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes ãrea rural.",
+    "description": "Sasha é um animal de personalidade sociável e se adapta bem a ambientes área rural.",
     "story": "Encontrado em uma rua tranquila, foi resgatado com um ferimento leve.",
     "images": [
       "https://placedog.net/400/280?id=12"
@@ -496,11 +496,11 @@
   {
     "id": "animal-013",
     "name": "Amora",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Chihuahua",
     "breed": "Chihuahua",
     "age": "2 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "MÃ©dio",
     "matchScore": 83,
     "isFavorite": false,
@@ -523,8 +523,8 @@
       "Vacinado",
       "Castrado"
     ],
-    "description": "Amora Ã© um animal de personalidade alegre e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em um bosque, foi resgatado com saÃºde estÃ¡vel.",
+    "description": "Amora é um animal de personalidade alegre e se adapta bem a ambientes apartamento.",
+    "story": "Encontrado em um bosque, foi resgatado com saúde estável.",
     "images": [
       "https://placedog.net/400/280?id=13"
     ],
@@ -537,7 +537,7 @@
   {
     "id": "animal-014",
     "name": "Pipoca",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Bulldog",
     "breed": "Bulldog",
     "age": "6 meses",
@@ -548,15 +548,15 @@
     "badges": "SUPER MATCH",
     "environment": [
       "Fazenda",
-      "Ãrea Rural"
+      "Área Rural"
     ],
     "behaviors": [
       "Carinhoso",
       "Curioso",
-      "BrincalhÃ£o"
+      "Brincalhão"
     ],
     "compatibilities": [
-      "Bom com CrianÃ§as",
+      "Bom com crianças",
       "Ideal para Apartamento"
     ],
     "health": [
@@ -564,8 +564,8 @@
       "Vacinado",
       "Microchipado"
     ],
-    "description": "Pipoca Ã© um animal de personalidade carinhoso e se adapta bem a ambientes fazenda.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com um pouco de medo.",
+    "description": "Pipoca é um animal de personalidade carinhoso e se adapta bem a ambientes fazenda.",
+    "story": "Encontrado em uma área rural, foi resgatado com um pouco de medo.",
     "images": [
       "https://placedog.net/400/280?id=14"
     ],
@@ -578,11 +578,11 @@
   {
     "id": "animal-015",
     "name": "Fiona",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Shih Tzu",
     "breed": "Shih Tzu",
     "age": "2 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "MÃ©dio",
     "matchScore": 74,
     "isFavorite": false,
@@ -592,21 +592,21 @@
       "Casa Pequena"
     ],
     "behaviors": [
-      "BrincalhÃ£o",
+      "Brincalhão",
       "Quieto",
       "Tranquilo"
     ],
     "compatibilities": [
       "Precisa de companhia",
-      "Sem CrianÃ§as"
+      "Sem crianças"
     ],
     "health": [
       "Microchipado",
       "Castrado",
       "Vacinado"
     ],
-    "description": "Fiona Ã© um animal de personalidade brincalhã£o e se adapta bem a ambientes casa com quintal.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com saÃºde estÃ¡vel.",
+    "description": "Fiona é um animal de personalidade brincalhão e se adapta bem a ambientes casa com quintal.",
+    "story": "Encontrado em uma rua tranquila, foi resgatado com saúde estável.",
     "images": [
       "https://placedog.net/400/280?id=15"
     ],
@@ -619,18 +619,18 @@
   {
     "id": "animal-016",
     "name": "Pingo",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Chihuahua",
     "breed": "Chihuahua",
     "age": "6 meses",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Grande",
     "matchScore": 69,
     "isFavorite": false,
     "badges": {},
     "environment": [
       "Apartamento",
-      "Ãrea Rural"
+      "Área Rural"
     ],
     "behaviors": [
       "Calmo",
@@ -639,14 +639,14 @@
     ],
     "compatibilities": [
       "Casa com Quintal",
-      "Precisa de espaÃ§o"
+      "Precisa de espaço"
     ],
     "health": [
       "Castrado",
       "Vacinado",
       "Microchipado"
     ],
-    "description": "Pingo Ã© um animal de personalidade calmo e se adapta bem a ambientes apartamento.",
+    "description": "Pingo é um animal de personalidade calmo e se adapta bem a ambientes apartamento.",
     "story": "Encontrado em um parque, foi resgatado com um ferimento leve.",
     "images": [
       "https://placedog.net/400/280?id=16"
@@ -660,23 +660,23 @@
   {
     "id": "animal-017",
     "name": "Amora",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Poodle",
     "breed": "Poodle",
     "age": "2 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Grande",
     "matchScore": 70,
     "isFavorite": false,
     "badges": {},
     "environment": [
       "Apartamento",
-      "SÃ­tio"
+      "Sítio"
     ],
     "behaviors": [
       "Curioso",
       "Calmo",
-      "BrincalhÃ£o"
+      "Brincalhão"
     ],
     "compatibilities": [
       "Aceita gatos",
@@ -687,7 +687,7 @@
       "Castrado",
       "Vacinado"
     ],
-    "description": "Amora Ã© um animal de personalidade curioso e se adapta bem a ambientes apartamento.",
+    "description": "Amora é um animal de personalidade curioso e se adapta bem a ambientes apartamento.",
     "story": "Encontrado em um bosque, foi resgatado com muita energia.",
     "images": [
       "https://placedog.net/400/280?id=17"
@@ -701,18 +701,18 @@
   {
     "id": "animal-018",
     "name": "Fred",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Dachshund",
     "breed": "Dachshund",
     "age": "2 anos",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Pequeno",
     "matchScore": 96,
     "isFavorite": false,
     "badges": {},
     "environment": [
       "Apartamento",
-      "SÃ­tio"
+      "Sítio"
     ],
     "behaviors": [
       "Curioso",
@@ -720,7 +720,7 @@
       "Carinhoso"
     ],
     "compatibilities": [
-      "Sem CrianÃ§as",
+      "Sem crianças",
       "Pode ficar sozinho"
     ],
     "health": [
@@ -728,7 +728,7 @@
       "Microchipado",
       "Vacinado"
     ],
-    "description": "Fred Ã© um animal de personalidade curioso e se adapta bem a ambientes apartamento.",
+    "description": "Fred é um animal de personalidade curioso e se adapta bem a ambientes apartamento.",
     "story": "Encontrado em uma feira, foi resgatado com um ferimento leve.",
     "images": [
       "https://placedog.net/400/280?id=18"
@@ -742,11 +742,11 @@
   {
     "id": "animal-019",
     "name": "Mimi",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "SRD",
     "breed": "SRD",
     "age": "1 ano",
-    "sex": "FÃªmea",
+    "sex": "Fémea",
     "size": "Pequeno",
     "matchScore": 89,
     "isFavorite": false,
@@ -756,20 +756,20 @@
       "Casa com Quintal"
     ],
     "behaviors": [
-      "TÃ­mido",
+      "Tímido",
       "Independente",
       "Carinhoso"
     ],
     "compatibilities": [
       "Aceita gatos",
-      "Sem CrianÃ§as"
+      "Sem crianças"
     ],
     "health": [
       "Microchipado",
       "Vacinado",
       "Vermifugado"
     ],
-    "description": "Mimi Ã© um animal de personalidade tã­mido e se adapta bem a ambientes fazenda.",
+    "description": "Mimi é um animal de personalidade tímido e se adapta bem a ambientes fazenda.",
     "story": "Encontrado em uma rua tranquila, foi resgatado com muita energia.",
     "images": [
       "https://placedog.net/400/280?id=19"
@@ -783,7 +783,7 @@
   {
     "id": "animal-020",
     "name": "Nina",
-    "category": "CÃ£o",
+    "category": "Cão",
     "species": "Beagle",
     "breed": "Beagle",
     "age": "6 meses",
@@ -794,15 +794,15 @@
     "badges": {},
     "environment": [
       "Apartamento",
-      "Ãrea Rural"
+      "Área Rural"
     ],
     "behaviors": [
-      "SociÃ¡vel",
+      "Sociável",
       "Curioso",
-      "TÃ­mido"
+      "Tímido"
     ],
     "compatibilities": [
-      "SociÃ¡vel com pessoas",
+      "Sociável com pessoas",
       "Precisa de companhia"
     ],
     "health": [
@@ -810,8 +810,8 @@
       "Vacinado",
       "Microchipado"
     ],
-    "description": "Nina Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com saÃºde estÃ¡vel.",
+    "description": "Nina é um animal de personalidade sociável e se adapta bem a ambientes apartamento.",
+    "story": "Encontrado em um bairro residencial, foi resgatado com saúde estável.",
     "images": [
       "https://placedog.net/400/280?id=20"
     ],
@@ -819,1236 +819,6 @@
       "caretakerName": "Karen Lima",
       "phone": "(11) 98291-2612",
       "email": "nina@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-021",
-    "name": "Bolt",
-    "category": "Gato",
-    "species": "Siberiano",
-    "breed": "Siberiano",
-    "age": "6 meses",
-    "sex": "Macho",
-    "size": "Pequeno",
-    "matchScore": 84,
-    "isFavorite": false,
-    "badges": "SUPER MATCH",
-    "environment": [
-      "Casa Pequena",
-      "SÃ­tio"
-    ],
-    "behaviors": [
-      "Calmo",
-      "Curioso",
-      "TÃ­mido"
-    ],
-    "compatibilities": [
-      "Adora receber visitas",
-      "Bom com CrianÃ§as"
-    ],
-    "health": [
-      "Castrado",
-      "Vermifugado",
-      "Vacinado"
-    ],
-    "description": "Bolt Ã© um animal de personalidade calmo e se adapta bem a ambientes casa pequena.",
-    "story": "Encontrado em uma feira, foi resgatado com muita fome.",
-    "images": [
-      "https://placekitten.com/400/280?image=21"
-    ],
-    "contact": {
-      "caretakerName": "Bruno Alves",
-      "phone": "(11) 93148-9861",
-      "email": "bolt@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-022",
-    "name": "Bento",
-    "category": "Gato",
-    "species": "Persa",
-    "breed": "Persa",
-    "age": "8 anos",
-    "sex": "Macho",
-    "size": "MÃ©dio",
-    "matchScore": 88,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "SÃ­tio"
-    ],
-    "behaviors": [
-      "Ativo",
-      "Protector",
-      "Curioso"
-    ],
-    "compatibilities": [
-      "Sem CrianÃ§as",
-      "NÃ£o gosta de gatos"
-    ],
-    "health": [
-      "Microchipado",
-      "Castrado",
-      "Vermifugado"
-    ],
-    "description": "Bento Ã© um animal de personalidade ativo e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em um parque, foi resgatado com muita energia.",
-    "images": [
-      "https://placekitten.com/400/280?image=22"
-    ],
-    "contact": {
-      "caretakerName": "Lucas Silva",
-      "phone": "(11) 93877-1117",
-      "email": "bento@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-023",
-    "name": "Sasha",
-    "category": "Gato",
-    "species": "SRD",
-    "breed": "SRD",
-    "age": "4 anos",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 80,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "Independente",
-      "Carinhoso",
-      "SociÃ¡vel"
-    ],
-    "compatibilities": [
-      "Ideal para Apartamento",
-      "Precisa de espaÃ§o"
-    ],
-    "health": [
-      "Castrado",
-      "Vacinado",
-      "Vermifugado"
-    ],
-    "description": "Sasha Ã© um animal de personalidade independente e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com muita fome.",
-    "images": [
-      "https://placekitten.com/400/280?image=23"
-    ],
-    "contact": {
-      "caretakerName": "Mariana Souza",
-      "phone": "(11) 92147-8731",
-      "email": "sasha@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-024",
-    "name": "Lili",
-    "category": "Gato",
-    "species": "Persa",
-    "breed": "Persa",
-    "age": "6 meses",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
-    "matchScore": 97,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "Casa com Quintal"
-    ],
-    "behaviors": [
-      "TÃ­mido",
-      "Alegre",
-      "Quieto"
-    ],
-    "compatibilities": [
-      "Sem CrianÃ§as",
-      "Casa com Quintal"
-    ],
-    "health": [
-      "Vermifugado",
-      "Castrado",
-      "Microchipado"
-    ],
-    "description": "Lili Ã© um animal de personalidade tã­mido e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placekitten.com/400/280?image=24"
-    ],
-    "contact": {
-      "caretakerName": "Gustavo Lima",
-      "phone": "(11) 92596-4569",
-      "email": "lili@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-025",
-    "name": "Maya",
-    "category": "Gato",
-    "species": "Persa",
-    "breed": "Persa",
-    "age": "6 meses",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 80,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "Casa com Quintal"
-    ],
-    "behaviors": [
-      "SociÃ¡vel",
-      "Carinhoso",
-      "Calmo"
-    ],
-    "compatibilities": [
-      "NÃ£o gosta de gatos",
-      "SociÃ¡vel com pessoas"
-    ],
-    "health": [
-      "Vacinado",
-      "Vermifugado",
-      "Castrado"
-    ],
-    "description": "Maya Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com um pouco de medo.",
-    "images": [
-      "https://placekitten.com/400/280?image=25"
-    ],
-    "contact": {
-      "caretakerName": "Lucas Silva",
-      "phone": "(11) 95799-8643",
-      "email": "maya@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-026",
-    "name": "Bolt",
-    "category": "Gato",
-    "species": "Bengal",
-    "breed": "Bengal",
-    "age": "5 anos",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 88,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa com Quintal",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "Curioso",
-      "SociÃ¡vel",
-      "Carinhoso"
-    ],
-    "compatibilities": [
-      "Ideal para Apartamento",
-      "Adora receber visitas"
-    ],
-    "health": [
-      "Vacinado",
-      "Castrado",
-      "Microchipado"
-    ],
-    "description": "Bolt Ã© um animal de personalidade curioso e se adapta bem a ambientes casa com quintal.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placekitten.com/400/280?image=26"
-    ],
-    "contact": {
-      "caretakerName": "Beatriz Rocha",
-      "phone": "(11) 94821-6611",
-      "email": "bolt@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-027",
-    "name": "Maya",
-    "category": "Gato",
-    "species": "SRD",
-    "breed": "SRD",
-    "age": "3 anos",
-    "sex": "FÃªmea",
-    "size": "Pequeno",
-    "matchScore": 74,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "SÃ­tio",
-      "Fazenda"
-    ],
-    "behaviors": [
-      "Independente",
-      "Calmo",
-      "Quieto"
-    ],
-    "compatibilities": [
-      "Precisa de companhia",
-      "NÃ£o gosta de gatos"
-    ],
-    "health": [
-      "Microchipado",
-      "Vacinado",
-      "Vermifugado"
-    ],
-    "description": "Maya Ã© um animal de personalidade independente e se adapta bem a ambientes sã­tio.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com um pouco de medo.",
-    "images": [
-      "https://placekitten.com/400/280?image=27"
-    ],
-    "contact": {
-      "caretakerName": "Mariana Souza",
-      "phone": "(11) 92574-5601",
-      "email": "maya@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-028",
-    "name": "Cookie",
-    "category": "Gato",
-    "species": "SiamÃªs",
-    "breed": "SiamÃªs",
-    "age": "1 ano",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 92,
-    "isFavorite": false,
-    "badges": "SUPER MATCH",
-    "environment": [
-      "SÃ­tio",
-      "Casa com Quintal"
-    ],
-    "behaviors": [
-      "Alegre",
-      "Carinhoso",
-      "Curioso"
-    ],
-    "compatibilities": [
-      "Bom com CrianÃ§as",
-      "Bom com outros cÃ£es"
-    ],
-    "health": [
-      "Vacinado",
-      "Vermifugado",
-      "Castrado"
-    ],
-    "description": "Cookie Ã© um animal de personalidade alegre e se adapta bem a ambientes sã­tio.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placekitten.com/400/280?image=28"
-    ],
-    "contact": {
-      "caretakerName": "Gustavo Lima",
-      "phone": "(11) 97765-9635",
-      "email": "cookie@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-029",
-    "name": "Lua",
-    "category": "Gato",
-    "species": "Siberiano",
-    "breed": "Siberiano",
-    "age": "3 anos",
-    "sex": "Macho",
-    "size": "MÃ©dio",
-    "matchScore": 70,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa com Quintal",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "Independente",
-      "Alegre",
-      "BrincalhÃ£o"
-    ],
-    "compatibilities": [
-      "NÃ£o gosta de gatos",
-      "Pode ficar sozinho"
-    ],
-    "health": [
-      "Microchipado",
-      "Vermifugado",
-      "Castrado"
-    ],
-    "description": "Lua Ã© um animal de personalidade independente e se adapta bem a ambientes casa com quintal.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com um pouco de medo.",
-    "images": [
-      "https://placekitten.com/400/280?image=29"
-    ],
-    "contact": {
-      "caretakerName": "PatrÃ­cia Oliveira",
-      "phone": "(11) 93177-7285",
-      "email": "lua@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-030",
-    "name": "Mia",
-    "category": "Gato",
-    "species": "Ragdoll",
-    "breed": "Ragdoll",
-    "age": "6 meses",
-    "sex": "FÃªmea",
-    "size": "Pequeno",
-    "matchScore": 65,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "SÃ­tio",
-      "Apartamento"
-    ],
-    "behaviors": [
-      "SociÃ¡vel",
-      "Ativo",
-      "Alegre"
-    ],
-    "compatibilities": [
-      "Adora receber visitas",
-      "Bom com outros cÃ£es"
-    ],
-    "health": [
-      "Microchipado",
-      "Vacinado",
-      "Castrado"
-    ],
-    "description": "Mia Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes sã­tio.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com muita fome.",
-    "images": [
-      "https://placekitten.com/400/280?image=30"
-    ],
-    "contact": {
-      "caretakerName": "Bruno Alves",
-      "phone": "(11) 96404-5660",
-      "email": "mia@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-031",
-    "name": "Fiona",
-    "category": "Gato",
-    "species": "Bengal",
-    "breed": "Bengal",
-    "age": "5 anos",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 96,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa com Quintal",
-      "Apartamento"
-    ],
-    "behaviors": [
-      "BrincalhÃ£o",
-      "Protector",
-      "Curioso"
-    ],
-    "compatibilities": [
-      "NÃ£o gosta de gatos",
-      "Bom com CrianÃ§as"
-    ],
-    "health": [
-      "Vermifugado",
-      "Castrado",
-      "Microchipado"
-    ],
-    "description": "Fiona Ã© um animal de personalidade brincalhã£o e se adapta bem a ambientes casa com quintal.",
-    "story": "Encontrado em um parque, foi resgatado com muita fome.",
-    "images": [
-      "https://placekitten.com/400/280?image=31"
-    ],
-    "contact": {
-      "caretakerName": "Rafael Costa",
-      "phone": "(11) 95675-8642",
-      "email": "fiona@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-032",
-    "name": "Fiona",
-    "category": "Gato",
-    "species": "SRD",
-    "breed": "SRD",
-    "age": "5 anos",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
-    "matchScore": 97,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa Pequena",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "Calmo",
-      "Curioso",
-      "SociÃ¡vel"
-    ],
-    "compatibilities": [
-      "Bom com CrianÃ§as",
-      "Precisa de espaÃ§o"
-    ],
-    "health": [
-      "Microchipado",
-      "Vermifugado",
-      "Vacinado"
-    ],
-    "description": "Fiona Ã© um animal de personalidade calmo e se adapta bem a ambientes casa pequena.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com muita energia.",
-    "images": [
-      "https://placekitten.com/400/280?image=32"
-    ],
-    "contact": {
-      "caretakerName": "Mariana Souza",
-      "phone": "(11) 92102-2709",
-      "email": "fiona@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-033",
-    "name": "Mia",
-    "category": "Gato",
-    "species": "Siberiano",
-    "breed": "Siberiano",
-    "age": "3 anos",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 65,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "SÃ­tio",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "Alegre",
-      "Calmo",
-      "TÃ­mido"
-    ],
-    "compatibilities": [
-      "SociÃ¡vel com pessoas",
-      "Precisa de companhia"
-    ],
-    "health": [
-      "Vacinado",
-      "Castrado",
-      "Vermifugado"
-    ],
-    "description": "Mia Ã© um animal de personalidade alegre e se adapta bem a ambientes sã­tio.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placekitten.com/400/280?image=33"
-    ],
-    "contact": {
-      "caretakerName": "JoÃ£o Pedro",
-      "phone": "(11) 97841-8840",
-      "email": "mia@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-034",
-    "name": "Mimi",
-    "category": "Gato",
-    "species": "Persa",
-    "breed": "Persa",
-    "age": "2 anos",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 80,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "SÃ­tio"
-    ],
-    "behaviors": [
-      "BrincalhÃ£o",
-      "SociÃ¡vel",
-      "Curioso"
-    ],
-    "compatibilities": [
-      "Precisa de companhia",
-      "Bom com outros cÃ£es"
-    ],
-    "health": [
-      "Vermifugado",
-      "Castrado",
-      "Vacinado"
-    ],
-    "description": "Mimi Ã© um animal de personalidade brincalhã£o e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma feira, foi resgatado com muita energia.",
-    "images": [
-      "https://placekitten.com/400/280?image=34"
-    ],
-    "contact": {
-      "caretakerName": "JoÃ£o Pedro",
-      "phone": "(11) 94215-7457",
-      "email": "mimi@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-035",
-    "name": "Penny",
-    "category": "Gato",
-    "species": "ExÃ³tico",
-    "breed": "ExÃ³tico",
-    "age": "1 ano",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 92,
-    "isFavorite": false,
-    "badges": "SUPER MATCH",
-    "environment": [
-      "Ãrea Rural",
-      "Casa com Quintal"
-    ],
-    "behaviors": [
-      "TÃ­mido",
-      "Carinhoso",
-      "Tranquilo"
-    ],
-    "compatibilities": [
-      "Precisa de espaÃ§o",
-      "NÃ£o gosta de gatos"
-    ],
-    "health": [
-      "Vermifugado",
-      "Microchipado",
-      "Vacinado"
-    ],
-    "description": "Penny Ã© um animal de personalidade tã­mido e se adapta bem a ambientes ãrea rural.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com saÃºde estÃ¡vel.",
-    "images": [
-      "https://placekitten.com/400/280?image=35"
-    ],
-    "contact": {
-      "caretakerName": "Beatriz Rocha",
-      "phone": "(11) 94614-7269",
-      "email": "penny@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-036",
-    "name": "Mora",
-    "category": "Gato",
-    "species": "SiamÃªs",
-    "breed": "SiamÃªs",
-    "age": "2 anos",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 93,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "BrincalhÃ£o",
-      "Protector",
-      "Alegre"
-    ],
-    "compatibilities": [
-      "Sem CrianÃ§as",
-      "Ideal para Apartamento"
-    ],
-    "health": [
-      "Vacinado",
-      "Microchipado",
-      "Castrado"
-    ],
-    "description": "Mora Ã© um animal de personalidade brincalhã£o e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com muita fome.",
-    "images": [
-      "https://placekitten.com/400/280?image=36"
-    ],
-    "contact": {
-      "caretakerName": "Lucas Silva",
-      "phone": "(11) 98449-5186",
-      "email": "mora@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-037",
-    "name": "Sasha",
-    "category": "Gato",
-    "species": "SRD",
-    "breed": "SRD",
-    "age": "3 anos",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 66,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Fazenda",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "Independente",
-      "Curioso",
-      "Alegre"
-    ],
-    "compatibilities": [
-      "Adora receber visitas",
-      "NÃ£o gosta de gatos"
-    ],
-    "health": [
-      "Vacinado",
-      "Castrado",
-      "Vermifugado"
-    ],
-    "description": "Sasha Ã© um animal de personalidade independente e se adapta bem a ambientes fazenda.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com muita energia.",
-    "images": [
-      "https://placekitten.com/400/280?image=37"
-    ],
-    "contact": {
-      "caretakerName": "Rafael Costa",
-      "phone": "(11) 95407-7136",
-      "email": "sasha@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-038",
-    "name": "Amora",
-    "category": "Gato",
-    "species": "SiamÃªs",
-    "breed": "SiamÃªs",
-    "age": "1 ano",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 75,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Fazenda",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "Quieto",
-      "Calmo",
-      "BrincalhÃ£o"
-    ],
-    "compatibilities": [
-      "Casa com Quintal",
-      "Adora receber visitas"
-    ],
-    "health": [
-      "Vacinado",
-      "Castrado",
-      "Microchipado"
-    ],
-    "description": "Amora Ã© um animal de personalidade quieto e se adapta bem a ambientes fazenda.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com muita energia.",
-    "images": [
-      "https://placekitten.com/400/280?image=38"
-    ],
-    "contact": {
-      "caretakerName": "Mariana Souza",
-      "phone": "(11) 96520-3942",
-      "email": "amora@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-039",
-    "name": "Nina",
-    "category": "Gato",
-    "species": "ExÃ³tico",
-    "breed": "ExÃ³tico",
-    "age": "4 anos",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 90,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "SÃ­tio",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "Independente",
-      "Carinhoso",
-      "Protector"
-    ],
-    "compatibilities": [
-      "Sem CrianÃ§as",
-      "Adora receber visitas"
-    ],
-    "health": [
-      "Vacinado",
-      "Microchipado",
-      "Vermifugado"
-    ],
-    "description": "Nina Ã© um animal de personalidade independente e se adapta bem a ambientes sã­tio.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placekitten.com/400/280?image=39"
-    ],
-    "contact": {
-      "caretakerName": "Beatriz Rocha",
-      "phone": "(11) 91800-9730",
-      "email": "nina@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-040",
-    "name": "Tobby",
-    "category": "Gato",
-    "species": "AngorÃ¡",
-    "breed": "AngorÃ¡",
-    "age": "4 anos",
-    "sex": "Macho",
-    "size": "MÃ©dio",
-    "matchScore": 92,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Fazenda",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "Independente",
-      "TÃ­mido",
-      "Calmo"
-    ],
-    "compatibilities": [
-      "NÃ£o gosta de gatos",
-      "Aceita gatos"
-    ],
-    "health": [
-      "Vacinado",
-      "Vermifugado",
-      "Castrado"
-    ],
-    "description": "Tobby Ã© um animal de personalidade independente e se adapta bem a ambientes fazenda.",
-    "story": "Encontrado em um parque, foi resgatado com um pouco de medo.",
-    "images": [
-      "https://placekitten.com/400/280?image=40"
-    ],
-    "contact": {
-      "caretakerName": "JoÃ£o Pedro",
-      "phone": "(11) 95645-2107",
-      "email": "tobby@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-041",
-    "name": "Koda",
-    "category": "Silvestre",
-    "species": "Papagaio",
-    "breed": "Papagaio",
-    "age": "5 anos",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 68,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "SÃ­tio"
-    ],
-    "behaviors": [
-      "Protector",
-      "SociÃ¡vel",
-      "Independente"
-    ],
-    "compatibilities": [
-      "Aceita gatos",
-      "Bom com outros cÃ£es"
-    ],
-    "health": [
-      "Vermifugado",
-      "Vacinado",
-      "Microchipado"
-    ],
-    "description": "Koda Ã© um animal de personalidade protector e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em uma feira, foi resgatado com saÃºde estÃ¡vel.",
-    "images": [
-      "https://placebear.com/400/280?image=41"
-    ],
-    "contact": {
-      "caretakerName": "Karen Lima",
-      "phone": "(11) 97172-7821",
-      "email": "koda@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-042",
-    "name": "Zeca",
-    "category": "Silvestre",
-    "species": "Hamster",
-    "breed": "Hamster",
-    "age": "6 meses",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
-    "matchScore": 82,
-    "isFavorite": false,
-    "badges": "SUPER MATCH",
-    "environment": [
-      "Fazenda",
-      "Apartamento"
-    ],
-    "behaviors": [
-      "Carinhoso",
-      "Protector",
-      "BrincalhÃ£o"
-    ],
-    "compatibilities": [
-      "Ideal para Apartamento",
-      "Sem CrianÃ§as"
-    ],
-    "health": [
-      "Castrado",
-      "Vermifugado",
-      "Vacinado"
-    ],
-    "description": "Zeca Ã© um animal de personalidade carinhoso e se adapta bem a ambientes fazenda.",
-    "story": "Encontrado em uma feira, foi resgatado com muita fome.",
-    "images": [
-      "https://placebear.com/400/280?image=42"
-    ],
-    "contact": {
-      "caretakerName": "Ana Clara",
-      "phone": "(11) 96814-7103",
-      "email": "zeca@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-043",
-    "name": "Bolt",
-    "category": "Silvestre",
-    "species": "Papagaio",
-    "breed": "Papagaio",
-    "age": "5 anos",
-    "sex": "Macho",
-    "size": "Pequeno",
-    "matchScore": 90,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa Pequena",
-      "Apartamento"
-    ],
-    "behaviors": [
-      "Alegre",
-      "TÃ­mido",
-      "Independente"
-    ],
-    "compatibilities": [
-      "NÃ£o gosta de gatos",
-      "Adora receber visitas"
-    ],
-    "health": [
-      "Vermifugado",
-      "Microchipado",
-      "Castrado"
-    ],
-    "description": "Bolt Ã© um animal de personalidade alegre e se adapta bem a ambientes casa pequena.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com muita fome.",
-    "images": [
-      "https://placebear.com/400/280?image=43"
-    ],
-    "contact": {
-      "caretakerName": "Ana Clara",
-      "phone": "(11) 98801-7959",
-      "email": "bolt@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-044",
-    "name": "Tina",
-    "category": "Silvestre",
-    "species": "Coelho",
-    "breed": "Coelho",
-    "age": "4 anos",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 90,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa com Quintal",
-      "Fazenda"
-    ],
-    "behaviors": [
-      "SociÃ¡vel",
-      "Carinhoso",
-      "Tranquilo"
-    ],
-    "compatibilities": [
-      "Pode ficar sozinho",
-      "Sem CrianÃ§as"
-    ],
-    "health": [
-      "Vermifugado",
-      "Microchipado",
-      "Castrado"
-    ],
-    "description": "Tina Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes casa com quintal.",
-    "story": "Encontrado em um parque, foi resgatado com um pouco de medo.",
-    "images": [
-      "https://placebear.com/400/280?image=44"
-    ],
-    "contact": {
-      "caretakerName": "JoÃ£o Pedro",
-      "phone": "(11) 94891-3583",
-      "email": "tina@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-045",
-    "name": "Zeca",
-    "category": "Silvestre",
-    "species": "CÃ¡gado",
-    "breed": "CÃ¡gado",
-    "age": "7 anos",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 94,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Ãrea Rural",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "SociÃ¡vel",
-      "Carinhoso",
-      "Alegre"
-    ],
-    "compatibilities": [
-      "Aceita gatos",
-      "Sem CrianÃ§as"
-    ],
-    "health": [
-      "Vermifugado",
-      "Vacinado",
-      "Microchipado"
-    ],
-    "description": "Zeca Ã© um animal de personalidade sociã¡vel e se adapta bem a ambientes ãrea rural.",
-    "story": "Encontrado em uma rua tranquila, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placebear.com/400/280?image=45"
-    ],
-    "contact": {
-      "caretakerName": "Mariana Souza",
-      "phone": "(11) 96170-1838",
-      "email": "zeca@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-046",
-    "name": "Ginger",
-    "category": "Silvestre",
-    "species": "Coelho",
-    "breed": "Coelho",
-    "age": "1 ano",
-    "sex": "Macho",
-    "size": "Grande",
-    "matchScore": 80,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Ãrea Rural",
-      "Casa com Quintal"
-    ],
-    "behaviors": [
-      "Curioso",
-      "Carinhoso",
-      "Ativo"
-    ],
-    "compatibilities": [
-      "Ideal para Apartamento",
-      "Pode ficar sozinho"
-    ],
-    "health": [
-      "Microchipado",
-      "Castrado",
-      "Vermifugado"
-    ],
-    "description": "Ginger Ã© um animal de personalidade curioso e se adapta bem a ambientes ãrea rural.",
-    "story": "Encontrado em um bairro residencial, foi resgatado com um pouco de medo.",
-    "images": [
-      "https://placebear.com/400/280?image=46"
-    ],
-    "contact": {
-      "caretakerName": "Ana Clara",
-      "phone": "(11) 97967-4179",
-      "email": "ginger@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-047",
-    "name": "Kiko",
-    "category": "Silvestre",
-    "species": "Curiango",
-    "breed": "Curiango",
-    "age": "8 anos",
-    "sex": "FÃªmea",
-    "size": "Grande",
-    "matchScore": 65,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa Pequena",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "BrincalhÃ£o",
-      "Carinhoso",
-      "Quieto"
-    ],
-    "compatibilities": [
-      "Precisa de companhia",
-      "Adora receber visitas"
-    ],
-    "health": [
-      "Microchipado",
-      "Vermifugado",
-      "Vacinado"
-    ],
-    "description": "Kiko Ã© um animal de personalidade brincalhã£o e se adapta bem a ambientes casa pequena.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com muita fome.",
-    "images": [
-      "https://placebear.com/400/280?image=47"
-    ],
-    "contact": {
-      "caretakerName": "Rafael Costa",
-      "phone": "(11) 92963-4171",
-      "email": "kiko@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-048",
-    "name": "Fiona",
-    "category": "Silvestre",
-    "species": "Iguana",
-    "breed": "Iguana",
-    "age": "3 anos",
-    "sex": "Macho",
-    "size": "Pequeno",
-    "matchScore": 78,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Casa Pequena",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "Alegre",
-      "Ativo",
-      "Tranquilo"
-    ],
-    "compatibilities": [
-      "NÃ£o gosta de gatos",
-      "Ideal para Apartamento"
-    ],
-    "health": [
-      "Microchipado",
-      "Vermifugado",
-      "Vacinado"
-    ],
-    "description": "Fiona Ã© um animal de personalidade alegre e se adapta bem a ambientes casa pequena.",
-    "story": "Encontrado em uma Ã¡rea rural, foi resgatado com saÃºde estÃ¡vel.",
-    "images": [
-      "https://placebear.com/400/280?image=48"
-    ],
-    "contact": {
-      "caretakerName": "Lucas Silva",
-      "phone": "(11) 91851-6788",
-      "email": "fiona@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-049",
-    "name": "Bola",
-    "category": "Silvestre",
-    "species": "Curiango",
-    "breed": "Curiango",
-    "age": "4 anos",
-    "sex": "FÃªmea",
-    "size": "MÃ©dio",
-    "matchScore": 94,
-    "isFavorite": false,
-    "badges": "SUPER MATCH",
-    "environment": [
-      "Ãrea Rural",
-      "Casa Pequena"
-    ],
-    "behaviors": [
-      "Quieto",
-      "Alegre",
-      "Ativo"
-    ],
-    "compatibilities": [
-      "Adora receber visitas",
-      "Aceita gatos"
-    ],
-    "health": [
-      "Castrado",
-      "Vacinado",
-      "Microchipado"
-    ],
-    "description": "Bola Ã© um animal de personalidade quieto e se adapta bem a ambientes ãrea rural.",
-    "story": "Encontrado em um bosque, foi resgatado com um ferimento leve.",
-    "images": [
-      "https://placebear.com/400/280?image=49"
-    ],
-    "contact": {
-      "caretakerName": "PatrÃ­cia Oliveira",
-      "phone": "(11) 91203-1562",
-      "email": "bola@petmatch.org"
-    }
-  },
-  {
-    "id": "animal-050",
-    "name": "Rex",
-    "category": "Silvestre",
-    "species": "CÃ¡gado",
-    "breed": "CÃ¡gado",
-    "age": "5 anos",
-    "sex": "Macho",
-    "size": "MÃ©dio",
-    "matchScore": 81,
-    "isFavorite": false,
-    "badges": {},
-    "environment": [
-      "Apartamento",
-      "Ãrea Rural"
-    ],
-    "behaviors": [
-      "TÃ­mido",
-      "Alegre",
-      "Carinhoso"
-    ],
-    "compatibilities": [
-      "Pode ficar sozinho",
-      "NÃ£o gosta de gatos"
-    ],
-    "health": [
-      "Vacinado",
-      "Microchipado",
-      "Castrado"
-    ],
-    "description": "Rex Ã© um animal de personalidade tã­mido e se adapta bem a ambientes apartamento.",
-    "story": "Encontrado em um parque, foi resgatado com muita fome.",
-    "images": [
-      "https://placebear.com/400/280?image=50"
-    ],
-    "contact": {
-      "caretakerName": "JoÃ£o Pedro",
-      "phone": "(11) 93301-6782",
-      "email": "rex@petmatch.org"
     }
   }
 ]

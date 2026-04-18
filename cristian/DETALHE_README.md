@@ -14,7 +14,7 @@ animal-detalhe.html?id=animal-001
 
 ### Exemplo de Link
 ```html
-<a href="detalhe.html?id=animal-001">Ver Detalhes</a>
+<a href="/detalhe/index.html?id=animal-001">Ver Detalhes</a>
 ```
 
 ## Dados Exibidos
