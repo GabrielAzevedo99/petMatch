@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadastro - PetMatch</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Nunito', sans-serif;
+}
+
+/* CORES */
+
+:root {
+--verde: #2d8a60;
+--laranja: #e8723a;
+--cinza-bg: #f7f6f2;
+--borda: #e4e0d8;
+--texto: #2a2a2a;
+--sombra: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* BODY */
+
+body {
+
+background: var(--cinza-bg);
+
+display: flex;
+flex-direction: column;
+
+min-height: 100vh;
+
+}
+
+/* HEADER */
+
+header {
+
+width: 100%;
+height: 100px;
+
+background: var(--verde);
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+}
+
+.header-inner h1 {
+
+font-size: 2rem;
+font-weight: 800;
+
+color: white;
+
+}
+
+.header-sub {
+
+font-size: 0.9rem;
+
+color: rgba(255,255,255,0.85);
+
+}
+
+/* CENTRAL */
+
+main {
+
+flex: 1;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 20px;
+
+}
+
+/* CARD */
+
+.auth-card {
+
+width: 100%;
+max-width: 400px;
+
+background: white;
+
+padding: 32px;
+
+border-radius: 18px;
+
+box-shadow: var(--sombra);
+
+border: 1px solid var(--borda);
+
+text-align: center;
+
+}
+
+/* TÍTULO */
+
+.auth-card h2 {
+
+color: var(--verde);
+
+margin-bottom: 20px;
+
+font-weight: 800;
+
+}
+
+/* INPUT */
+
+.input-group {
+
+margin-bottom: 14px;
+
+}
+
+.input-group input {
+
+width: 100%;
+
+padding: 13px;
+
+border-radius: 10px;
+
+border: 1.5px solid var(--borda);
+
+background: var(--cinza-bg);
+
+font-size: 14px;
+
+transition: 0.2s;
+
+}
+
+.input-group input:focus {
+
+outline: none;
+
+border-color: var(--verde);
+
+box-shadow: 0 0 0 3px rgba(45,138,96,0.15);
+
+}
+
+/* BOTÃO */
+
+.btn-auth {
+
+width: 100%;
+
+padding: 13px;
+
+border: none;
+
+border-radius: 10px;
+
+background: var(--verde);
+
+color: white;
+
+font-weight: 700;
+
+font-size: 15px;
+
+cursor: pointer;
+
+transition: 0.2s;
+
+}
+
+.btn-auth:hover {
+
+opacity: 0.9;
+
+transform: scale(0.98);
+
+}
+
+/* LINKS */
+
+.auth-links {
+
+margin-top: 16px;
+
+display: flex;
+flex-direction: column;
+
+gap: 8px;
+
+font-size: 14px;
+
+}
+
+.auth-links a {
+
+color: var(--laranja);
+
+font-weight: 600;
+
+text-decoration: none;
+
+}
+
+.auth-links a:hover {
+
+text-decoration: underline;
+
+}
+
+/* MENSAGEM */
+
+.msg {
+
+margin-top: 12px;
+
+font-weight: 700;
+
+font-size: 14px;
+
+color: var(--laranja);
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 420px) {
+
+.auth-card {
+
+padding: 24px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<h1>🐾 PetMatch</h1>
+
+<p class="header-sub">
+
+Crie sua conta e encontre seu pet ideal
+
+</p>
+
+</div>
+
+</header>
+
+
+<main>
+
+<div class="auth-card">
+
+<h2>Criar nova conta</h2>
+
+<form id="cadastroForm">
+
+    <!-- NOME COMPLETO -->
+<div class="input-group">
+  <input
+    type="text"
+    id="nomeCompleto"
+    placeholder="Nome completo"
+    required>
+</div>
+
+    <div class="input-group">
+
+<input
+type="text"
+id="login"
+placeholder="Login"
+required>
+
+</div>
+
+
+<div class="input-group">
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
+
+</div>
+
+<!-- DATA DE NASCIMENTO -->
+<div class="input-group">
+  <input
+    type="date"
+    id="dataNascimento"
+    placeholder="Data de Nascimento"
+    required>
+</div>
+
+<!-- ENDEREÇO (BASE) -->
+<div class="input-group">
+  <input
+    type="text"
+    id="endereco"
+    placeholder="Endereço (opcional ou complemento)">
+</div>
+
+<!-- CEP -->
+<div class="input-group">
+  <input
+    type="text"
+    id="cep"
+    placeholder="CEP (ex: 00000-000)"
+    maxlength="9">
+</div>
+
+<!-- RUA -->
+<div class="input-group">
+  <input
+    type="text"
+    id="rua"
+    placeholder="Rua">
+</div>
+
+<!-- BAIRRO -->
+<div class="input-group">
+  <input
+    type="text"
+    id="bairro"
+    placeholder="Bairro">
+</div>
+
+<!-- CIDADE -->
+<div class="input-group">
+  <input
+    type="text"
+    id="cidade"
+    placeholder="Cidade">
+</div>
+
+<!-- ESTADO -->
+<div class="input-group">
+  <input
+    type="text"
+    id="estado"
+    placeholder="Estado (UF)">
+</div>
+
+
+<div class="input-group">
+
+<input
+type="password"
+id="senha"
+placeholder="Senha (6+ caracteres e 1 especial)"
+required>
+
+</div>
+
+
+<div class="input-group">
+
+<input
+type="password"
+id="confirmarSenha"
+placeholder="Confirmar senha"
+required>
+
+</div>
+
+
+<button
+type="submit"
+class="btn-auth">
+
+Cadastrar
+
+</button>
+
+
+<div class="auth-links">
+
+<p>
+
+Já possui conta?
+
+<a href="login.html">
+
+Entrar
+
+</a>
+
+</p>
+
+<a href="index.html">
+
+← Voltar ao início
+
+</a>
+
+</div>
+
+</form>
+
+
+<div id="msgCadastro" class="msg"></div>
+
+</div>
+
+</main>
+
+
+<script src="auth.js"></script>
+
+<script>
+
+/* VALIDAÇÃO EXTRA SENHA */
+
+const cadastroForm =
+document.getElementById("cadastroForm");
+
+if (cadastroForm){
+
+cadastroForm.addEventListener(
+"submit",
+function(e){
+
+const senha =
+document.getElementById("senha").value;
+
+const confirmar =
+document.getElementById("confirmarSenha").value;
+
+const regex =
+/^(?=.*[!@#$%^&*]).{6,}$/;
+
+if (!regex.test(senha)){
+
+alert(
+"A senha deve ter no mínimo 6 caracteres e 1 caractere especial."
+);
+
+e.preventDefault();
+return;
+
+}
+
+if (senha !== confirmar){
+
+alert(
+"As senhas não coincidem."
+);
+
+e.preventDefault();
+return;
+
+}
+
+});
+}
+
+</script>
+
+</body>
+
+</html>

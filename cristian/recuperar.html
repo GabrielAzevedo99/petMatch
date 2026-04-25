@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Recuperar Senha - PetMatch</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Nunito', sans-serif;
+}
+
+/* CORES */
+
+:root {
+--verde: #2d8a60;
+--laranja: #e8723a;
+--cinza-bg: #f7f6f2;
+--borda: #e4e0d8;
+--sombra: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* BODY */
+
+body {
+
+background: var(--cinza-bg);
+
+display: flex;
+flex-direction: column;
+
+min-height: 100vh;
+
+}
+
+/* HEADER */
+
+header {
+
+width: 100%;
+height: 100px;
+
+background: var(--verde);
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+}
+
+.header-inner h1 {
+
+font-size: 2rem;
+font-weight: 800;
+
+color: white;
+
+}
+
+.header-sub {
+
+font-size: 0.9rem;
+
+color: rgba(255,255,255,0.85);
+
+}
+
+/* CENTRAL */
+
+main {
+
+flex: 1;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 20px;
+
+}
+
+/* CARD */
+
+.auth-card {
+
+width: 100%;
+max-width: 400px;
+
+background: white;
+
+padding: 32px;
+
+border-radius: 18px;
+
+box-shadow: var(--sombra);
+
+border: 1px solid var(--borda);
+
+text-align: center;
+
+}
+
+/* INPUT */
+
+.input-group {
+
+margin-bottom: 14px;
+
+}
+
+.input-group input {
+
+width: 100%;
+
+padding: 13px;
+
+border-radius: 10px;
+
+border: 1.5px solid var(--borda);
+
+background: var(--cinza-bg);
+
+font-size: 14px;
+
+}
+
+/* BOTÃO */
+
+.btn-auth {
+
+width: 100%;
+
+padding: 13px;
+
+border: none;
+
+border-radius: 10px;
+
+background: var(--verde);
+
+color: white;
+
+font-weight: 700;
+
+cursor: pointer;
+
+}
+
+.btn-auth:hover {
+
+opacity: 0.9;
+
+}
+
+/* LINKS */
+
+.auth-links {
+
+margin-top: 16px;
+
+font-size: 14px;
+
+}
+
+.auth-links a {
+
+color: var(--laranja);
+
+font-weight: 600;
+
+text-decoration: none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<h1>🐾 PetMatch</h1>
+
+<p class="header-sub">
+
+Recuperação de senha
+
+</p>
+
+</div>
+
+</header>
+
+<main>
+
+<div class="auth-card">
+
+<h2>Recuperar senha</h2>
+
+<p>Necessario colocar o e-mail de cadastro e clicar em enviar, pegue o tokem gerado e ensira juntamente com a nova senha</p>
+
+<form id="recuperarForm">
+
+<!-- EMAIL -->
+
+<div class="input-group">
+
+<input
+type="email"
+id="emailRecuperar"
+placeholder="Digite seu email"
+required>
+
+</div>
+
+<!-- TOKEN -->
+
+<div class="input-group">
+
+<input
+type="text"
+id="tokenInput"
+placeholder="Digite o token recebido">
+
+</div>
+
+<!-- NOVA SENHA -->
+
+<div class="input-group">
+
+<input
+type="password"
+id="novaSenha"
+placeholder="Nova senha">
+
+</div>
+
+<button
+type="submit"
+class="btn-auth">
+
+Enviar
+
+</button>
+
+<div class="auth-links">
+
+<a href="login.html">
+
+← Voltar ao login
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</main>
+
+<script>
+
+// regex senha
+const senhaRegex =
+/^(?=.*[!@#$%^&*]).{6,}$/;
+
+const form =
+document.getElementById("recuperarForm");
+
+form.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const email =
+document.getElementById("emailRecuperar").value;
+
+const tokenInput =
+document.getElementById("tokenInput").value;
+
+const novaSenha =
+document.getElementById("novaSenha").value;
+
+
+// ===== PASSO 1 — GERAR TOKEN =====
+
+if (!tokenInput){
+
+const token =
+Math.random()
+.toString(36)
+.substring(2,8);
+
+localStorage.setItem(
+"resetToken",
+token
+);
+
+localStorage.setItem(
+"resetEmail",
+email
+);
+
+alert(
+
+`Token enviado para ${email}
+(Token simulado: ${token})`
+
+);
+
+return;
+
+}
+
+
+// ===== PASSO 2 — VALIDAR TOKEN =====
+
+const tokenSalvo =
+localStorage.getItem("resetToken");
+
+const emailSalvo =
+localStorage.getItem("resetEmail");
+
+if (
+tokenInput !== tokenSalvo ||
+email !== emailSalvo
+){
+
+alert("Token inválido!");
+
+return;
+
+}
+
+
+// ===== PASSO 3 — VALIDAR SENHA =====
+
+if (!senhaRegex.test(novaSenha)){
+
+alert(
+"Senha deve ter 6+ caracteres e 1 especial"
+);
+
+return;
+
+}
+
+
+// ===== PASSO 4 — ALTERAR SENHA =====
+
+let usuarioEncontrado = null;
+
+for (let key in localStorage){
+
+if (key.startsWith("user-")){
+
+let user =
+JSON.parse(
+localStorage.getItem(key)
+);
+
+if (user.email === email){
+
+user.senha = novaSenha;
+
+localStorage.setItem(
+key,
+JSON.stringify(user)
+);
+
+usuarioEncontrado = true;
+
+}
+
+}
+
+}
+
+if (!usuarioEncontrado){
+
+alert("Usuário não encontrado");
+
+return;
+
+}
+
+alert("Senha alterada com sucesso!");
+
+window.location.href =
+"login.html";
+
+});
+
+</script>
+
+</body>
+
+</html>
