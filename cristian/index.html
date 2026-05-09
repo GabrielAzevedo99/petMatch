@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
@@ -25,7 +26,11 @@
     <li><a href="#" class="active">🏠 Início</a></li>
     <li><a href="#">🔍 Buscar Pets</a></li>
     <li><a href="#">⭐ Meus Favoritos</a></li>
-    <li><a href="login.html" id="meuPerfilBtn">👤 Meu Perfil</a>
+    <li><a href="login.html" id="meuPerfilBtn">👤 Meu Perfil</a></li>
+    <li>
+  <button id="btnLogout" type="button">
+    Sair
+  </button>
 </li>
   </ul>
 </nav>
@@ -101,6 +106,12 @@
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
+
+<script src="auth.js"></script>
+
+<script>
+validarSessao();
+</script>
 
 <script src="script.js"></script>
 

@@ -367,38 +367,32 @@ return;
 
 // ===== PASSO 4 — ALTERAR SENHA =====
 
-let usuarioEncontrado = null;
+fetch(
+"./petmatch-api/resetar-senha.php",
+{
 
-for (let key in localStorage){
+method: "POST",
 
-if (key.startsWith("user-")){
+headers: {
+"Content-Type": "application/json"
+},
 
-let user =
-JSON.parse(
-localStorage.getItem(key)
-);
+body: JSON.stringify({
 
-if (user.email === email){
+email,
+novaSenha
 
-user.senha = novaSenha;
-
-localStorage.setItem(
-key,
-JSON.stringify(user)
-);
-
-usuarioEncontrado = true;
+})
 
 }
 
-}
+)
+.then(res => res.json())
+.then(data => {
 
-}
+if (!data.success){
 
-if (!usuarioEncontrado){
-
-alert("Usuário não encontrado");
-
+alert(data.message);
 return;
 
 }
@@ -408,10 +402,17 @@ alert("Senha alterada com sucesso!");
 window.location.href =
 "login.html";
 
+})
+.catch(error => {
+
+console.error(error);
+
+alert("Erro ao alterar senha");
+
 });
 
+});
 </script>
 
 </body>
-
 </html>
