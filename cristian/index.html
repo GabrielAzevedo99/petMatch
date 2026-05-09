@@ -29,8 +29,18 @@
   </ul>
 </nav>
 
-<!-- FILTROS -->
-<section class="filtros">
+<!-- ABAS DE NAVEGAÇÃO -->
+<nav class="tabs-nav">
+  <div class="tabs-container">
+    <button class="tab-btn active" data-tab="inicio">🏠 Início</button>
+    <button class="tab-btn" data-tab="match">📋 Ver match</button>
+  </div>
+</nav>
+
+<!-- ABA 1: INÍCIO -->
+<div class="tab-content active" id="tab-inicio">
+  <!-- FILTROS -->
+  <section class="filtros">
   <div class="filtros-inner">
     <div class="filtros-selects">
 
@@ -80,8 +90,55 @@
 <!-- CONTADOR -->
 <div class="resultados-info" id="resultadosInfo"></div>
 
-<!-- GALERIA -->
-<section class="galeria" id="galeria"></section>
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria"></section>
+</div>
+
+<div class="tab-content" id="tab-match">
+
+  <section class="filtros">
+    <div class="filtros-inner">
+      <div class="filtros-selects">
+        <div class="select-wrap">
+          <label for="filtroCategoria">Categoria</label>
+          <select id="filtroCategoria" aria-label="Filtrar por categoria">
+            <option value="todos">Todos</option>
+            <option value="cao">Cães</option>
+            <option value="gato">Gatos</option>
+            <option value="pequeno">Pequenos</option>
+            <option value="tranquilo">Tranquilos</option>
+          </select>
+        </div>
+      </div>
+      <button id="btnLimparMatch" class="btn-limpar">✕ Limpar filtros</button>
+    </div>
+  </section>
+
+  <!-- INFORMAÇÕES SOBRE MATCH -->
+  <div class="match-info">
+    <h2>📊 Compatibilidade de Pets</h2>
+    <div class="match-legenda">
+      <div class="legenda-item super">
+        <span class="legenda-badge">⭐ Super Match</span>
+        <span class="legenda-desc">> 90% de compatibilidade</span>
+      </div>
+      <div class="legenda-item bom">
+        <span class="legenda-badge">✓ Bom Match</span>
+        <span class="legenda-desc">70% – 89% de compatibilidade</span>
+      </div>
+      <div class="legenda-item padrao">
+        <span class="legenda-badge">Match Regular</span>
+        <span class="legenda-desc">< 70% de compatibilidade</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTADOR -->
+  <div class="resultados-info" id="resultadosInfoMatch"></div>
+
+  <!-- GALERIA DE CRITÉRIOS -->
+  <section class="galeria" id="galeriaMatch"></section>
+</div>
 
 <!-- MODAL DE DETALHES -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalNome">

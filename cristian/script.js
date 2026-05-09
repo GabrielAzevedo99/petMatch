@@ -149,7 +149,7 @@ function renderCard(animal) {
   let matchClass = 'padrao';
   let matchText = `${matchScore}%`;
 
-  if (matchScore >= 85) {
+  if (matchScore >= 90) {
     matchClass = 'super';
     matchText = '⭐ SUPER MATCH';
   } else if (matchScore >= 70) {
@@ -230,3 +230,104 @@ function makeCardClickable(card, animalId) {
     window.location.href = `detalhe.html?id=${animalId}`;
   });
 }
+
+/* ========== SISTEMA DE ABAS ========== */
+
+// Event listeners para os botões de abas
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    const tabName = btn.getAttribute('data-tab');
+    
+    // Remove classe ativa de todos os botões
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    
+    // Remove classe ativa de todos os conteúdos
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    
+    // Adiciona classe ativa ao botão clicado
+    btn.classList.add('active');
+    
+    // Adiciona classe ativa ao conteúdo correspondente
+    document.getElementById(`tab-${tabName}`).classList.add('active');
+    
+    // Se for a aba de critérios, renderiza os pets
+    if (tabName === 'match') {
+      renderPetsMatch(pets);
+    }
+  });
+});
+
+/* ========== MATCH ========== */
+
+const galeriaMatch = document.getElementById("galeriaMatch");
+const resultadosInfoMatch = document.getElementById("resultadosInfoMatch");
+
+// Renderizar pets na aba de match
+function renderPetsMatch(lista = []) {
+  galeriaMatch.innerHTML = "";
+
+  if (lista.length === 0) {
+    galeriaMatch.innerHTML = `
+      <div class="estado-vazio">
+        <span class="vazio-icon">🐾</span>
+        <p>Nenhum pet encontrado com esses filtros.</p>
+        <small>Tente ajustar os filtros acima.</small>
+      </div>`;
+    resultadosInfoMatch.textContent = "";
+    return;
+  }
+
+  resultadosInfoMatch.textContent = `${lista.length} ${lista.length > 1 ? 'pets encontrados' : 'pet encontrado'}`;
+  
+  lista
+    .sort((a, b) => b.matchScore - a.matchScore)
+    .forEach(animal => {
+      galeriaMatch.appendChild(renderCard(animal));
+    });
+
+  galeriaMatch.querySelectorAll(".btn-fav, .btn-fav-card").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  });
+}
+
+// Aplicar filtros na aba de match
+function aplicarFiltrosMatch() {
+  const filtroCategoria = document.getElementById("filtroCategoria").value;
+
+  const filtrados = pets.filter(pet => {
+    if (filtroCategoria === "todos") return true;
+    
+    if (filtroCategoria === "cao") {
+      return pet.category?.toLowerCase() === "cão";
+    } else if (filtroCategoria === "gato") {
+      return pet.category?.toLowerCase() === "gato";
+    } else if (filtroCategoria === "pequeno") {
+      return pet.size?.toLowerCase() === "pequeno";
+    } else if (filtroCategoria === "tranquilo") {
+      return pet.behaviors?.some(b => 
+        b.toLowerCase().includes("calmo") || 
+        b.toLowerCase().includes("tranquilo") ||
+        b.toLowerCase().includes("dócil") ||
+        b.toLowerCase().includes("tranquilo")
+      );
+    }
+    
+    return true;
+  });
+
+  renderPetsMatch(filtrados);
+}
+
+// Event listener para filtro de categoria
+document.getElementById("filtroCategoria")?.addEventListener("change", aplicarFiltrosMatch);
+
+// Botão limpar filtros da aba match
+document.getElementById("btnLimparMatch")?.addEventListener("click", () => {
+  document.getElementById("filtroCategoria").value = "todos";
+  aplicarFiltrosMatch();
+  showToast("Filtros limpos!");
+});
