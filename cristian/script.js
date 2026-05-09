@@ -263,13 +263,25 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 const galeriaMatch = document.getElementById("galeriaMatch");
 const resultadosInfoMatch = document.getElementById("resultadosInfoMatch");
+const carouselTrack = document.getElementById("carouselTrack");
+const carouselContainer = document.getElementById("carouselContainer");
+const carouselBtnPrev = document.getElementById("carouselBtnPrev");
+const carouselBtnNext = document.getElementById("carouselBtnNext");
+const carouselDots = document.getElementById("carouselDots");
+const carouselCounter = document.getElementById("carouselCounter");
 
-// Renderizar pets na aba de match
+let petsMatchAtual = [];
+let currentCarouselIndex = 0;
+
+// Renderizar pets na aba de match com carrossel
 function renderPetsMatch(lista = []) {
-  galeriaMatch.innerHTML = "";
+  carouselTrack.innerHTML = "";
+  carouselDots.innerHTML = "";
+  petsMatchAtual = lista;
+  currentCarouselIndex = 0;
 
   if (lista.length === 0) {
-    galeriaMatch.innerHTML = `
+    carouselContainer.innerHTML = `
       <div class="estado-vazio">
         <span class="vazio-icon">🐾</span>
         <p>Nenhum pet encontrado com esses filtros.</p>
@@ -281,53 +293,142 @@ function renderPetsMatch(lista = []) {
 
   resultadosInfoMatch.textContent = `${lista.length} ${lista.length > 1 ? 'pets encontrados' : 'pet encontrado'}`;
   
-  lista
-    .sort((a, b) => b.matchScore - a.matchScore)
-    .forEach(animal => {
-      galeriaMatch.appendChild(renderCard(animal));
-    });
+  const sortedPets = lista.sort((a, b) => b.matchScore - a.matchScore);
 
-  galeriaMatch.querySelectorAll(".btn-fav, .btn-fav-card").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
+  // Criar cards para o carrossel
+  sortedPets.forEach((animal, index) => {
+    const card = renderCard(animal);
+    carouselTrack.appendChild(card);
+
+    // Criar dots
+    const dot = document.createElement("button");
+    dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+    dot.setAttribute("aria-label", `Ir para pet ${index + 1}`);
+    dot.addEventListener("click", () => goToCarouselSlide(index));
+    carouselDots.appendChild(dot);
+  });
+
+  updateCarouselButtons();
+  updateCarouselCounter();
+}
+
+// Atualizar contador e posição do carrossel
+function updateCarouselCounter() {
+  carouselCounter.textContent = `${currentCarouselIndex + 1} de ${petsMatchAtual.length}`;
+}
+
+// Atualizar estado dos botões
+function updateCarouselButtons() {
+  carouselBtnPrev.disabled = currentCarouselIndex === 0;
+  carouselBtnNext.disabled = currentCarouselIndex === petsMatchAtual.length - 1;
+  
+  // Atualizar posição do carrossel
+  carouselTrack.style.transform = `translateX(-${currentCarouselIndex * 100}%)`;
+
+  // Atualizar dots
+  document.querySelectorAll(".carousel-dot").forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentCarouselIndex);
   });
 }
 
+// Ir para um slide específico
+function goToCarouselSlide(index) {
+  currentCarouselIndex = Math.max(0, Math.min(index, petsMatchAtual.length - 1));
+  updateCarouselCounter();
+  updateCarouselButtons();
+}
+
+// Próximo pet
+function nextCarouselSlide() {
+  if (currentCarouselIndex < petsMatchAtual.length - 1) {
+    currentCarouselIndex++;
+    updateCarouselCounter();
+    updateCarouselButtons();
+  }
+}
+
+// Pet anterior
+function prevCarouselSlide() {
+  if (currentCarouselIndex > 0) {
+    currentCarouselIndex--;
+    updateCarouselCounter();
+    updateCarouselButtons();
+  }
+}
+
+// Event listeners para botões do carrossel
+carouselBtnPrev.addEventListener("click", prevCarouselSlide);
+carouselBtnNext.addEventListener("click", nextCarouselSlide);
+
+// Navegação por teclado
+document.addEventListener("keydown", (e) => {
+  const activeTab = document.querySelector(".tab-content.active");
+  if (activeTab.id === "tab-match" && petsMatchAtual.length > 0) {
+    if (e.key === "ArrowLeft") prevCarouselSlide();
+    if (e.key === "ArrowRight") nextCarouselSlide();
+  }
+});
+
 // Aplicar filtros na aba de match
 function aplicarFiltrosMatch() {
-  const filtroCategoria = document.getElementById("filtroCategoria").value;
+  const tipo = document.getElementById("tipoFiltroMatch").value;
+  const tamanho = document.getElementById("tamanhoFiltroMatch").value;
+  const ambiente = document.getElementById("ambienteFiltroMatch").value;
+  const comportamento = document.getElementById("comportamentoFiltroMatch").value;
 
   const filtrados = pets.filter(pet => {
-    if (filtroCategoria === "todos") return true;
-    
-    if (filtroCategoria === "cao") {
-      return pet.category?.toLowerCase() === "cão";
-    } else if (filtroCategoria === "gato") {
-      return pet.category?.toLowerCase() === "gato";
-    } else if (filtroCategoria === "pequeno") {
-      return pet.size?.toLowerCase() === "pequeno";
-    } else if (filtroCategoria === "tranquilo") {
-      return pet.behaviors?.some(b => 
-        b.toLowerCase().includes("calmo") || 
-        b.toLowerCase().includes("tranquilo") ||
-        b.toLowerCase().includes("dócil") ||
-        b.toLowerCase().includes("tranquilo")
-      );
+    // Filtro de tipo
+    let passaTipo = tipo === "todos";
+    if (!passaTipo) {
+      if (tipo === "cao") passaTipo = pet.category?.toLowerCase() === "cão";
+      else if (tipo === "gato") passaTipo = pet.category?.toLowerCase() === "gato";
+      else if (tipo === "silvestre") passaTipo = pet.category?.toLowerCase() === "silvestre";
     }
-    
-    return true;
+
+    // Filtro de tamanho
+    let passaTamanho = tamanho === "todos";
+    if (!passaTamanho) {
+      const tamanhoMapeado = { pequeno: "Pequeno", medio: "Médio", grande: "Grande" };
+      passaTamanho = pet.size === tamanhoMapeado[tamanho];
+    }
+
+    // Filtro de ambiente (pet.environment é um array)
+    let passaAmbiente = ambiente === "todos";
+    if (!passaAmbiente && pet.environment) {
+      if (ambiente === "apartamento") {
+        passaAmbiente = pet.environment.some(a => a.toLowerCase().includes("apartamento"));
+      } else if (ambiente === "casa") {
+        passaAmbiente = pet.environment.some(a => a.toLowerCase().includes("casa"));
+      }
+    }
+
+    // Filtro de comportamento (pet.behaviors é um array)
+    let passaComportamento = comportamento === "todos";
+    if (!passaComportamento && pet.behaviors) {
+      if (comportamento === "calmo") {
+        passaComportamento = pet.behaviors.some(b => b.toLowerCase().includes("calmo") || b.toLowerCase().includes("tranquilo"));
+      } else if (comportamento === "ativo") {
+        passaComportamento = pet.behaviors.some(b => b.toLowerCase().includes("ativo") || b.toLowerCase().includes("alegre") || b.toLowerCase().includes("brincalhão"));
+      }
+    }
+
+    return passaTipo && passaTamanho && passaAmbiente && passaComportamento;
   });
 
   renderPetsMatch(filtrados);
 }
 
-// Event listener para filtro de categoria
-document.getElementById("filtroCategoria")?.addEventListener("change", aplicarFiltrosMatch);
+// Event listeners para filtros de match
+document.querySelectorAll("#tipoFiltroMatch, #tamanhoFiltroMatch, #ambienteFiltroMatch, #comportamentoFiltroMatch").forEach(select => {
+  select.addEventListener("change", aplicarFiltrosMatch);
+});
 
 // Botão limpar filtros da aba match
 document.getElementById("btnLimparMatch")?.addEventListener("click", () => {
-  document.getElementById("filtroCategoria").value = "todos";
+  document.getElementById("tipoFiltroMatch").value = "todos";
+  document.getElementById("tamanhoFiltroMatch").value = "todos";
+  document.getElementById("ambienteFiltroMatch").value = "todos";
+  document.getElementById("comportamentoFiltroMatch").value = "todos";
   aplicarFiltrosMatch();
   showToast("Filtros limpos!");
 });

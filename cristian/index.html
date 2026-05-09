@@ -99,16 +99,45 @@
   <section class="filtros">
     <div class="filtros-inner">
       <div class="filtros-selects">
+
         <div class="select-wrap">
-          <label for="filtroCategoria">Categoria</label>
-          <select id="filtroCategoria" aria-label="Filtrar por categoria">
+          <label for="tipoFiltroMatch">Tipo</label>
+          <select id="tipoFiltroMatch" aria-label="Filtrar por tipo de animal">
             <option value="todos">Todos</option>
             <option value="cao">Cães</option>
             <option value="gato">Gatos</option>
-            <option value="pequeno">Pequenos</option>
-            <option value="tranquilo">Tranquilos</option>
+            <option value="silvestre">Silvestre</option>
           </select>
         </div>
+
+        <div class="select-wrap">
+          <label for="tamanhoFiltroMatch">Tamanho</label>
+          <select id="tamanhoFiltroMatch" aria-label="Filtrar por tamanho">
+            <option value="todos">Todos</option>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+          </select>
+        </div>
+
+        <div class="select-wrap">
+          <label for="ambienteFiltroMatch">Ambiente</label>
+          <select id="ambienteFiltroMatch" aria-label="Filtrar por ambiente">
+            <option value="todos">Todos</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="casa">Casa</option>
+          </select>
+        </div>
+
+        <div class="select-wrap">
+          <label for="comportamentoFiltroMatch">Comportamento</label>
+          <select id="comportamentoFiltroMatch" aria-label="Filtrar por comportamento">
+            <option value="todos">Todos</option>
+            <option value="calmo">Calmo</option>
+            <option value="ativo">Ativo</option>
+          </select>
+        </div>
+
       </div>
       <button id="btnLimparMatch" class="btn-limpar">✕ Limpar filtros</button>
     </div>
@@ -136,8 +165,23 @@
   <!-- CONTADOR -->
   <div class="resultados-info" id="resultadosInfoMatch"></div>
 
-  <!-- GALERIA DE CRITÉRIOS -->
-  <section class="galeria" id="galeriaMatch"></section>
+  <!-- CARROSSEL DE PETS -->
+  <div class="carousel-container" id="carouselContainer">
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" id="carouselBtnPrev" aria-label="Anterior">❮</button>
+      
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <button class="carousel-btn carousel-btn-next" id="carouselBtnNext" aria-label="Próximo">❯</button>
+    </div>
+
+    <div class="carousel-controls">
+      <span class="carousel-counter" id="carouselCounter"></span>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
 </div>
 
 <!-- MODAL DE DETALHES -->
