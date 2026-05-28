@@ -252,6 +252,17 @@ placeholder="Nova senha">
 
 </div>
 
+<!-- CONFIRMAR SENHA -->
+
+<div class="input-group">
+
+<input
+type="password"
+id="confirmarSenha"
+placeholder="Confirmar nova senha">
+
+</div>
+
 <button
 type="submit"
 class="btn-auth">
@@ -299,6 +310,9 @@ document.getElementById("tokenInput").value;
 
 const novaSenha =
 document.getElementById("novaSenha").value;
+
+const confirmarSenha =
+document.getElementById("confirmarSenha").value;
 
 
 // ===== PASSO 1 — GERAR TOKEN =====
@@ -364,6 +378,15 @@ return;
 
 }
 
+// ===== VALIDAR CONFIRMAÇÃO =====
+
+if (novaSenha !== confirmarSenha){
+
+alert("As senhas não coincidem!");
+
+return;
+
+}
 
 // ===== PASSO 4 — ALTERAR SENHA =====
 
