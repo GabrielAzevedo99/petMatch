@@ -1,80 +1,86 @@
 <?php
 
 session_start();
-
 header("Content-Type: application/json");
 
-$data =
-json_decode(
-file_get_contents("php://input"),
-true
+require_once "conexao.php";
+
+$data = json_decode(
+    file_get_contents("php://input"),
+    true
 );
 
-$login =
-trim($data["login"] ?? "");
+$login = trim($data["login"] ?? "");
+$senha = trim($data["senha"] ?? "");
 
-$senha =
-trim($data["senha"] ?? "");
-
-$arquivo =
-__DIR__ . "/data/usuarios.json";
-
-if (!file_exists($arquivo)) {
+if (!$login || !$senha) {
 
 echo json_encode([
-
-"success" => false,
-"message" => "Arquivo não encontrado"
-
+    "success" => false,
+    "message" => "Preencha todos os campos"
 ]);
 
 exit;
 
 }
 
-$conteudo =
-file_get_contents($arquivo);
+try {
 
-$usuarios =
-json_decode($conteudo, true);
+$stmt = $pdo->prepare("
+    SELECT *
+    FROM users
+    WHERE login = :login
+    OR email = :email
+    LIMIT 1
+");
 
-if (
-$usuarios === null ||
-!is_array($usuarios)
-){
-
-echo json_encode([
-
-"success" => false,
-"message" => "JSON inválido"
-
+$stmt->execute([
+    ":login" => $login,
+    ":email" => $login
 ]);
 
-exit;
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-}
-
-foreach ($usuarios as $user) {
-
-if (
-    (trim($user["login"]) === $login || trim($user["email"]) === $login) &&
-    trim($user["senha"]) === $senha
-) {
-
-    $_SESSION["usuario"] = $login;
+if (!$user) {
 
     echo json_encode([
-        "success" => true
+        "success" => false,
+        "message" => "Usuário não encontrado"
     ]);
 
     exit;
 }
 
+if (!password_verify($senha, $user["senha"])) {
+
+    echo json_encode([
+        "success" => false,
+        "message" => "Senha inválida"
+    ]);
+
+    exit;
 }
 
+// SESSÃO
+$_SESSION["user_id"] = $user["id"];
+$_SESSION["user_login"] = $user["login"];
+
 echo json_encode([
-
-"success" => false,
-"message" => "Login inválido"
-
+    "success" => true,
+    "message" => "Login realizado com sucesso",
+    "user" => [
+        "id" => $user["id"],
+        "login" => $user["login"],
+        "email" => $user["email"]
+    ]
 ]);
+
+} catch (Exception $e) {
+
+echo json_encode([
+    "success" => false,
+    "message" => "Erro no servidor",
+    "error" => $e->getMessage()
+]);
+
+}
